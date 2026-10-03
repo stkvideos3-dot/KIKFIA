@@ -496,6 +496,27 @@ Most structural details (steel thickness, snow load, fire ratings, warranties, l
 
 ---
 
+## J. Review and complaint check: the 5 Strong factories (added 3 Oct 2026)
+
+I searched for bad reviews, complaints, scam reports, lawsuits and disputes for each Strong factory. Sources were Alibaba and Made-in-China store ratings, Trustpilot, Houzz, tiny-house media, news, consumer-complaint sites, and Chinese-language searches. **No scam report, fraud complaint or lawsuit naming any of the 5 was found.** That is good, but it is not proof of safety: many unhappy B2B buyers never post online, and Alibaba only shows reviews from Trade Assurance orders.
+
+| # | Factory | Buyer ratings found | Complaints / scams / lawsuits found | Things to watch |
+|---|---|---|---|---|
+| 1 | Beijing Chengdong (CDPH) | **Alibaba store 5/5 from about 1,359 reviews** (an older snapshot showed 874). The strongest review record of all 20 | None found | Several websites use the Chengdong name (cdph.net, cdphhouse.com, cdph.cc, chengdonghousing.com). One lists "marble tiles", which is odd for this company. **Only use contact details given inside the Alibaba store chat.** Founding year varies by source (1998 group vs 2009 company) |
+| 2 | Ningbo Deepblue Smarthouse | Made-in-China 4.0/5 from **only 1 review**. Few public buyer reviews | None found | Made-in-China lists it as "Manufacturer/Factory & Trading Company" with **49 employees**, small next to its "10,000+ homes" claim. Thin review history. Ask for 3 recent customer references in the US or Australia and call them |
+| 3 | Hebei Weizhengheng (WZH) | Ratings differ by store: 5.0 (1 review) on the Modular House store, 5/5 (28 reviews) on another WZH store, and **4.2/5 and 4.4/5** on other listings | None found. The Amazon US listing had no customer reviews when covered by media | The 4.2 and 4.4 ratings mean some buyers were less than fully satisfied, but the review text could not be read. **Open the store's "Reviews" tab and read the 1–3 star reviews before ordering.** Several WZH companies exist, so confirm which one you pay |
+| 4 | Zhejiang Putian (PTH) | Made-in-China shows 0 written reviews. A Houzz profile exists. No negative ratings found | None found. A Chinese court dispute found in search involved a different company (Shanghai "Putian Energy"), not this factory | Chinese sources agree it was founded in 2008, is based in Keqiao, Shaoxing, and has about 200 employees. Few public buyer reviews, so ask for references |
+| 5 | Zhuhai Remac Space (Midea group) | **No buyer reviews found** on any platform | None found | Low Alibaba activity; mostly works on big projects (bathroom pods, modular buildings). Official site: remacaspace.com. Confirm it will sell small quantities and has export experience to your market |
+
+**Ranking after the review check (my judgement):**
+1. **Beijing Chengdong (CDPH):** largest positive review record plus Canadian welding certification. Best all-round choice to contact first.
+2. **Ningbo Deepblue Smarthouse:** best US documentation (ICC-ES), but a thin review record. Verify references.
+3. **Hebei Weizhengheng (WZH):** good factory evidence. Read its lower-rated reviews first.
+4. **Zhejiang Putian (PTH):** solid factory, few public reviews.
+5. **Zhuhai Remac Space:** strong parent company, but no buyer feedback to judge and probably not set up for small orders.
+
+---
+
 ## Sources
 
 **Alibaba (supplier-owned store and profile pages)** – every store and product link in Tables 1–4 and the alternates table. Key profile pages used:
@@ -553,3 +574,8 @@ Most structural details (steel thickness, snow load, fire ratings, warranties, l
 - Consulate General of India, Guangzhou – trade disputes & advisories: https://cgiguangzhou.gov.in/page/trade-disputes
 - Consulate General of India, Shanghai – trade-dispute list: https://cgishanghai.gov.in/pdf/5nov_List_of_chinese_companies_with_trade_disputesBL.pdf
 - Embassy of India, Beijing – companies involved in trade disputes: https://eoibeijing.gov.in/Register
+- CDPH Alibaba store (store rating and reviews): https://cdph.en.alibaba.com/ · CDPH-named websites: https://www.cdph.net/about-us · https://www.cdphhouse.com/service · https://chengdonghousing.com/
+- Deepblue on Made-in-China (company review page): https://deepblue.en.made-in-china.com/company-review/ · Houzz AU: https://www.houzz.com.au/professionals/home-builders/deepblue-smarthouse-co-ltd-pfvwau-pf~1102087335 · Own site: https://www.deepbluehome.com/blog
+- WZH feedback page: https://wzh.en.alibaba.com/in_ID/company_profile/feedback.html?clusterId=75 · Amazon listing coverage: https://www.chron.com/news/article/On-Amazon-you-can-buy-a-24-000-prefab-14291260.php · WZH sites: https://www.wzhhouse.com/ · https://www.wzhcontainerhouse.com/
+- Putian on Houzz: https://www.houzz.com/professionals/building-supplies/zhejiang-putian-integrated-housing-co-ltd-pfvwus-pf~1327319752 · Made-in-China review page: https://putianchina.en.made-in-china.com/company-review/ · Chinese brand profile: https://www.cnpp.cn/pinpai/65547.html
+- Remac official site: https://www.remacaspace.com/blog/A-Cost-Benefit-Analysis-of-Prefab-Bathroom-Pods-vs-Traditional-Builds
