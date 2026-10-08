@@ -23,3 +23,6 @@ Clean product photos picked from the supplier catalogs. Every image was checked 
 - Any photo showing company signs, banners, brand logos (such as a SANY excavator or a coffee shop sign), info boards in front of the house, or date stamps.
 
 > Tip: these are supplier photos. Before using them in paid ads, ask the factory to confirm in writing that you may use them for marketing.
+
+## 07-real-projects
+36 real project and installation photos cut from the inside pages of "The Box Modular House 2025" catalogue: offices, a kindergarten and classrooms, a clinic, staff housing and labor camps, resort villas, a steel warehouse, cafés, restaurants and export shipping. Project titles, captions, logos, shop signs and text overlays were left out. Photos showing a shop's brand (supermarket, furniture showroom, police and fire station signs, etc.) were not used.
