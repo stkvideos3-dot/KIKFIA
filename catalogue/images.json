@@ -1,0 +1,735 @@
+{
+ "cover": "backyard-studio-c.jpg",
+ "cover_alt": "Wood-clad backyard studio with glass doors and a solar roof",
+ "about_band": "villa-panorama-c2.jpg",
+ "trust_hero": "p-office-install-clean.jpg",
+ "ov_adu": "r-family-veranda.jpg",
+ "ov_exp": "expandable-40.jpg",
+ "ov_tiny": "tiny-front.jpg",
+ "ov_mod": "n-light-steel-villa-stone-yellow-facade.jpg",
+ "more8": [
+  [
+   "guest-rooftop.jpg",
+   "Villas &amp; Guest Houses"
+  ],
+  [
+   "n-white-prefab-office-palm-garden.jpg",
+   "Portable Offices"
+  ],
+  [
+   "n-black-gable-pavilion-cafe-night.jpg",
+   "Commercial Buildings"
+  ],
+  [
+   "p-resort-villas-aerial.jpg",
+   "Resorts &amp; Hotels"
+  ],
+  [
+   "p-visa-center-exterior.jpg",
+   "Warehouses &amp; Industrial"
+  ],
+  [
+   "modular.jpg",
+   "Storage &amp; Site Units"
+  ],
+  [
+   "n-modular-training-room-mesh-chairs.jpg",
+   "Schools &amp; Training"
+  ],
+  [
+   "n-modular-clinic-ward-block-aerial-canopy.jpg",
+   "Clinics &amp; Staff Housing"
+  ]
+ ],
+ "more_pages": "Pages 13–17",
+ "more_toc": [
+  [
+   "Villas &amp; Guest Houses",
+   "13"
+  ],
+  [
+   "Offices &amp; Commercial",
+   "14"
+  ],
+  [
+   "Resorts &amp; Hospitality",
+   "15"
+  ],
+  [
+   "Industrial &amp; Storage",
+   "16"
+  ],
+  [
+   "Schools &amp; Clinics",
+   "17"
+  ],
+  [
+   "Customization",
+   "18"
+  ]
+ ],
+ "div_core": "villa-panorama-c2.jpg",
+ "div_more": "p-resort-villas-aerial.jpg",
+ "adu_hero": "r-family-veranda.jpg",
+ "adu_pos": "50% 60%",
+ "adu_t1": "backyard-studio-c.jpg",
+ "adu_t2": "n-container-home-kitchenette-interior.jpg",
+ "adu_t3": "int-bedroom.jpg",
+ "exp_hero": "expandable-40.jpg",
+ "exp_strip": [
+  [
+   "office-c.jpg",
+   "Unfolded on site",
+   "White expandable house unfolded with central glass door"
+  ],
+  [
+   "n-container-home-kitchenette-interior.jpg",
+   "Kitchen",
+   "Bright interior with kitchenette and sliding glass doors"
+  ],
+  [
+   "int-bedroom.jpg",
+   "Bedroom",
+   "Bedroom inside an expandable house"
+  ],
+  [
+   "g-resort-row-c.jpg",
+   "Installed on piers",
+   "Row of navy expandable houses on piers under palm trees"
+  ]
+ ],
+ "exp_projects": {
+  "h2": "Expandable houses, delivered.",
+  "pitch": "Real expandable installations: resort rows, homestay villages and family homes. Every layout and finish can be adapted.",
+  "figs": [
+   [
+    "n-expandable-homestay-village-night-street.jpg",
+    "Homestay village at night",
+    "Two rows of expandable houses with porches lit at night",
+    "m-big"
+   ],
+   [
+    "g-resort-row-c.jpg",
+    "Resort row on piers",
+    "Navy expandable houses on piers under palm trees",
+    ""
+   ],
+   [
+    "exp-veranda-row.jpg",
+    "Cabins with verandas",
+    "Row of expandable houses with white verandas",
+    ""
+   ],
+   [
+    "office-c.jpg",
+    "Unfolded 20 ft model",
+    "White expandable house unfolded",
+    ""
+   ],
+   [
+    "r-family-veranda.jpg",
+    "Family model with veranda",
+    "White expandable house with covered veranda",
+    ""
+   ],
+   [
+    "p-factory-expandable-line.jpg",
+    "Finished in the factory",
+    "Row of finished expandable houses in a factory hall",
+    ""
+   ]
+  ],
+  "types": [
+   [
+    "Studio",
+    "Open plan, one room"
+   ],
+   [
+    "1 Bedroom",
+    "Bedroom, bath, kitchen"
+   ],
+   [
+    "2 Bedrooms",
+    "Family or rental layout"
+   ],
+   [
+    "3 Bedrooms",
+    "40 ft model"
+   ],
+   [
+    "Porch &amp; Veranda",
+    "Covered outdoor living"
+   ],
+   [
+    "Glass Front",
+    "Full-height glazing"
+   ],
+   [
+    "On Piers or Slab",
+    "Fits your site"
+   ],
+   [
+    "Multi-Unit Sites",
+    "Rows, villages, resorts"
+   ]
+  ]
+ },
+ "tiny_hero": "tiny-front.jpg",
+ "tiny_pos": "50% 50%",
+ "tiny_t1": "g-capsule-snow.jpg",
+ "tiny_t2": "pod-lakeside-c.jpg",
+ "tiny_t3": "i-container-kitchen.jpg",
+ "mod_hero": "n-light-steel-villa-stone-yellow-facade.jpg",
+ "mod_pos": "50% 45%",
+ "mod_t1": "villa-panorama-c2.jpg",
+ "mod_t2": "modular.jpg",
+ "mod_t3": "g-villa-aerial-c.jpg",
+ "interiors": [
+  [
+   "d-container-showroom-interior-mezzanine.jpg",
+   "Showroom with mezzanine",
+   "Multi-level modular showroom interior with glass railing"
+  ],
+  [
+   "n-timber-lounge-interior-long-table.jpg",
+   "Timber lounge",
+   "Timber-lined lounge with long table and garden view"
+  ],
+  [
+   "n-container-home-kitchenette-interior.jpg",
+   "Kitchenette",
+   "Bright interior with kitchenette and sliding glass doors"
+  ],
+  [
+   "int-bedroom.jpg",
+   "Bedroom",
+   "Bedroom with white bedding and black-framed window"
+  ],
+  [
+   "n-modular-office-corridor-wood-floor.jpg",
+   "Office corridor",
+   "Bright modular office corridor with wood-look floor"
+  ],
+  [
+   "n-modular-training-room-mesh-chairs.jpg",
+   "Training room",
+   "Modular training room with rows of chairs"
+  ]
+ ],
+ "cust_layout": "cutaway.jpg",
+ "cust_ext": "g-guesthouse-front.jpg",
+ "cust_win": "n-black-modular-pavilion-glass-wall-lake.jpg",
+ "cust_door": "office-c.jpg",
+ "promise_photo": "cabin-winter-detail.jpg",
+ "promise_alt": "White cabin wall and door covered in icicles on a sunny winter day",
+ "j_design": "cutaway.jpg",
+ "j_make": "p-factory-expandable-line.jpg",
+ "j_ship": "p-export-ship-clean.jpg",
+ "j_install": "p-clinic-frame-aerial.jpg",
+ "secondary": [
+  {
+   "aria": "Villas and guest houses",
+   "eyebrow": "Villas &amp; guest houses",
+   "h2": "Private villas and guest houses.",
+   "pitch": "Comfortable stays for family, guests and vacation renters, with decks, rooftop terraces and big glass.",
+   "figs": [
+    [
+     "guest-rooftop.jpg",
+     "Guest house with rooftop terrace",
+     "Container guest house with rooftop terrace and deck",
+     "m-big"
+    ],
+    [
+     "villa-panorama-c2.jpg",
+     "Glass-walled villa",
+     "Modular villa with full-height glass",
+     ""
+    ],
+    [
+     "n-light-steel-villa-stone-yellow-facade.jpg",
+     "Two-story family home",
+     "Two-story home with stone and lap siding",
+     ""
+    ],
+    [
+     "g-guesthouse-front.jpg",
+     "Guest suite with deck",
+     "Guest house with deck and stairs",
+     ""
+    ],
+    [
+     "n-black-modular-pavilion-glass-wall-lake.jpg",
+     "Lakeside pavilion",
+     "Black modular pavilion with glass wall by a lake",
+     ""
+    ],
+    [
+     "pod-lakeside-c.jpg",
+     "Garden studio",
+     "Black modular studio pod with glass door",
+     ""
+    ]
+   ],
+   "types": [
+    [
+     "Luxury Villas",
+     "Large glass and premium finishes"
+    ],
+    [
+     "Modern Villas",
+     "Clean, contemporary design"
+    ],
+    [
+     "Holiday Homes",
+     "Ready for your vacation land"
+    ],
+    [
+     "Guest Houses",
+     "Private suites for visitors"
+    ],
+    [
+     "Vacation Rentals",
+     "Designed for guest appeal"
+    ],
+    [
+     "Rooftop Decks",
+     "Extra outdoor living"
+    ],
+    [
+     "Family Homes",
+     "One or two stories"
+    ],
+    [
+     "Backyard Studios",
+     "Work, create or host"
+    ]
+   ]
+  },
+  {
+   "aria": "Offices and commercial",
+   "eyebrow": "Offices &amp; commercial",
+   "h2": "Workspaces and storefronts, open sooner.",
+   "pitch": "Offices, cafés, showrooms and shops that are quick to open and easy to expand or move.",
+   "figs": [
+    [
+     "n-black-gable-pavilion-cafe-night.jpg",
+     "Café pavilion",
+     "Black modular café pavilion lit at night",
+     "m-big"
+    ],
+    [
+     "n-white-prefab-office-palm-garden.jpg",
+     "Office building",
+     "White single-story modular office among palms",
+     ""
+    ],
+    [
+     "n-black-gable-pavilion-gable-end.jpg",
+     "Modern commercial pavilion",
+     "Black gable-roof modular pavilion",
+     ""
+    ],
+    [
+     "d-container-showroom-interior-mezzanine.jpg",
+     "Showroom interior",
+     "Modular showroom with mezzanine",
+     ""
+    ],
+    [
+     "p-cafe-terrace.jpg",
+     "Café terrace",
+     "Café terrace with green wall",
+     ""
+    ],
+    [
+     "n-prefab-office-open-plan-interior.jpg",
+     "Open-plan office",
+     "Bright open-plan modular office interior",
+     ""
+    ]
+   ],
+   "types": [
+    [
+     "Portable Offices",
+     "Single units to full buildings"
+    ],
+    [
+     "Office Buildings",
+     "Multi-room modular offices"
+    ],
+    [
+     "Sales Offices",
+     "Real estate and site sales"
+    ],
+    [
+     "Showrooms",
+     "Display products in style"
+    ],
+    [
+     "Retail Shops",
+     "Pop-up or permanent stores"
+    ],
+    [
+     "Cafés",
+     "Pavilions with terraces"
+    ],
+    [
+     "Restaurants",
+     "Kitchens, dining and decks"
+    ],
+    [
+     "Commercial Buildings",
+     "Large-span halls"
+    ]
+   ]
+  },
+  {
+   "aria": "Resorts and hospitality",
+   "eyebrow": "Resorts &amp; hospitality",
+   "h2": "Resorts and stays guests remember.",
+   "pitch": "Villas, hotel units and glamping cabins that open in phases and grow with demand.",
+   "figs": [
+    [
+     "p-resort-villas-aerial.jpg",
+     "Resort villas",
+     "Aerial view of pitched-roof resort villas",
+     "m-big"
+    ],
+    [
+     "resort-aerial.jpg",
+     "Capsule cabin resort",
+     "Aerial view of capsule cabins around a pool",
+     ""
+    ],
+    [
+     "commercial-clean.jpg",
+     "Hotel units on stilts",
+     "Colorful raised container hotel units",
+     ""
+    ],
+    [
+     "n-expandable-homestay-village-night-street.jpg",
+     "Homestay village",
+     "Rows of expandable houses lit at night",
+     ""
+    ],
+    [
+     "exp-veranda-row.jpg",
+     "Veranda cabins",
+     "Row of cabins with white verandas",
+     ""
+    ],
+    [
+     "g-capsule-snow.jpg",
+     "All-season capsule",
+     "Capsule cabin in winter",
+     ""
+    ]
+   ],
+   "types": [
+    [
+     "Resort Villas",
+     "Private villas with decks"
+    ],
+    [
+     "Hotel Units",
+     "Stackable rooms and suites"
+    ],
+    [
+     "Eco Lodges",
+     "Low-impact raised cabins"
+    ],
+    [
+     "Glamping Units",
+     "Capsule and pod cabins"
+    ],
+    [
+     "Tourist Stays",
+     "Rooms for parks and attractions"
+    ],
+    [
+     "Pools &amp; Decks",
+     "Outdoor living areas"
+    ],
+    [
+     "Phased Openings",
+     "Start small, add units"
+    ],
+    [
+     "Theming",
+     "Finishes to match your brand"
+    ]
+   ]
+  },
+  {
+   "aria": "Industrial and storage",
+   "eyebrow": "Industrial, storage &amp; site buildings",
+   "h2": "Strong buildings for hard work.",
+   "pitch": "Warehouses, workshops, storage units and site facilities, sized for your operation and fast to assemble.",
+   "figs": [
+    [
+     "p-detachable-install.jpg",
+     "Two-story site building",
+     "Two-story modular building being assembled",
+     "m-big"
+    ],
+    [
+     "modular.jpg",
+     "Stacked site units",
+     "White stacked modules at dusk",
+     ""
+    ],
+    [
+     "p-visa-center-exterior.jpg",
+     "Large-span building",
+     "Long single-story panel building",
+     ""
+    ],
+    [
+     "n-white-prefab-office-long-facade-palms.jpg",
+     "Site office block",
+     "Long white modular office building",
+     ""
+    ],
+    [
+     "storage-c.jpg",
+     "Storage unit",
+     "Grey storage unit with door on a deck",
+     ""
+    ],
+    [
+     "n-insulated-sandwich-wall-panels-stack-detail.jpg",
+     "Insulated wall panels",
+     "Stack of insulated sandwich wall panels",
+     ""
+    ]
+   ],
+   "types": [
+    [
+     "Warehouses",
+     "Large-span structures"
+    ],
+    [
+     "Storage Units",
+     "Secure and weather-resistant"
+    ],
+    [
+     "Workshop Buildings",
+     "Power, light and ventilation"
+    ],
+    [
+     "Industrial Buildings",
+     "Plant rooms and halls"
+    ],
+    [
+     "Site Facilities",
+     "Restrooms, showers, canteens"
+    ],
+    [
+     "Folding Units",
+     "Flat-packed, fast to set up"
+    ],
+    [
+     "Guard Houses",
+     "Security and gate units"
+    ],
+    [
+     "Relocatable",
+     "Move to the next site"
+    ]
+   ]
+  },
+  {
+   "aria": "Schools and clinics",
+   "eyebrow": "Schools, clinics &amp; staff housing",
+   "h2": "Classrooms, clinics and staff housing.",
+   "pitch": "Modular buildings for education, healthcare and workforce accommodation, delivered on tight schedules.",
+   "figs": [
+    [
+     "n-modular-clinic-ward-block-aerial-canopy.jpg",
+     "Healthcare facility",
+     "Aerial view of a long modular clinic block with covered walkway",
+     "m-big"
+    ],
+    [
+     "n-modular-training-room-mesh-chairs.jpg",
+     "Training room",
+     "Training room with rows of chairs",
+     ""
+    ],
+    [
+     "n-modular-public-waiting-hall-corridor.jpg",
+     "Waiting hall",
+     "Modular waiting hall with seating and corridor",
+     ""
+    ],
+    [
+     "n-white-prefab-office-corner-palms.jpg",
+     "Classroom block",
+     "White single-story modular building",
+     ""
+    ],
+    [
+     "n-modular-office-corridor-wood-floor.jpg",
+     "Bright corridors",
+     "Modular corridor with wood-look floor",
+     ""
+    ],
+    [
+     "p-clinic-modules-aerial.jpg",
+     "Two-story ward block",
+     "Aerial view of a two-story modular block",
+     ""
+    ]
+   ],
+   "types": [
+    [
+     "Schools",
+     "Full campuses or extensions"
+    ],
+    [
+     "Classrooms",
+     "Bright, insulated rooms"
+    ],
+    [
+     "Training Centers",
+     "Flexible open plans"
+    ],
+    [
+     "Medical Clinics",
+     "Clean, easy-care finishes"
+    ],
+    [
+     "Healthcare Facilities",
+     "Wards and treatment rooms"
+    ],
+    [
+     "Labor Camps",
+     "Housing at any scale"
+    ],
+    [
+     "Staff Accommodation",
+     "Rooms, kitchens, laundry"
+    ],
+    [
+     "Public Service",
+     "Service and visitor centers"
+    ]
+   ]
+  }
+ ],
+ "galleries": [
+  {
+   "aria": "Project gallery completed",
+   "eyebrow": "Project gallery · Completed projects",
+   "h2": "Real buildings, really delivered.",
+   "note": "Projects shown were delivered through KIKFIA's manufacturing partner network. Finishes, sizes and site work vary by project.",
+   "tiles": [
+    [
+     "p-resort-villas-aerial.jpg",
+     "Resort villas",
+     "Aerial view of resort villas",
+     "g-big"
+    ],
+    [
+     "n-modular-clinic-ward-block-aerial-canopy.jpg",
+     "Healthcare facility",
+     "Aerial view of modular clinic block",
+     "g-tall2"
+    ],
+    [
+     "n-black-gable-pavilion-cafe-night.jpg",
+     "Café pavilion",
+     "Modular café pavilion at night",
+     ""
+    ],
+    [
+     "n-light-steel-villa-stone-yellow-facade.jpg",
+     "Family home",
+     "Two-story family home",
+     ""
+    ],
+    [
+     "resort-aerial.jpg",
+     "Capsule resort",
+     "Capsule cabins around a pool",
+     ""
+    ],
+    [
+     "n-white-prefab-office-palm-garden.jpg",
+     "Office building",
+     "White modular office building",
+     ""
+    ],
+    [
+     "g-resort-row-c.jpg",
+     "Expandable resort",
+     "Expandable houses on piers",
+     ""
+    ],
+    [
+     "n-expandable-homestay-village-night-street.jpg",
+     "Homestay village",
+     "Expandable village at night",
+     ""
+    ]
+   ]
+  },
+  {
+   "aria": "Project gallery installation",
+   "eyebrow": "Project gallery · Installation &amp; delivery",
+   "h2": "From factory floor to finished site.",
+   "note": "Installation and delivery photos from projects completed through KIKFIA's manufacturing partner network.",
+   "tiles": [
+    [
+     "p-office-install-clean.jpg",
+     "Two-story office installation",
+     "Two-story modular office during installation",
+     "g-big"
+    ],
+    [
+     "p-export-ship-clean.jpg",
+     "Export shipping",
+     "Flat-pack modules loaded on a ship",
+     "g-tall2"
+    ],
+    [
+     "p-factory-expandable-line.jpg",
+     "Factory finishing",
+     "Finished expandable houses in a factory hall",
+     ""
+    ],
+    [
+     "p-clinic-frame-aerial.jpg",
+     "Frame assembly",
+     "Steel module frames assembled on site",
+     ""
+    ],
+    [
+     "p-detachable-install.jpg",
+     "Stacking modules",
+     "Modules being stacked on site",
+     ""
+    ],
+    [
+     "modular.jpg",
+     "Modules in place",
+     "Stacked white modules at dusk",
+     ""
+    ],
+    [
+     "p-clinic-modules-aerial.jpg",
+     "Completed block",
+     "Two-story modular block from above",
+     ""
+    ],
+    [
+     "n-insulated-sandwich-wall-panels-stack-detail.jpg",
+     "Insulated panels",
+     "Insulated sandwich wall panels",
+     ""
+    ]
+   ]
+  }
+ ]
+}
