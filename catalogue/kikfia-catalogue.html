@@ -1,0 +1,923 @@
+<title>KIKFIA Catalogue</title>
+<meta name="description" content="KIKFIA Custom Portable Houses product catalogue">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Public+Sans:ital,wght@0,300..700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: US Letter sheets (8.5 x 11 in) sized in container units so every page scales as one print sheet.
+   Deep spruce bookends the catalogue; interior pages are stone-white with brass hairlines for spec data. */
+:root {
+  --spruce: #15302A;
+  --spruce-2: #1F443A;
+  --brass: #B08A4E;
+  --brass-soft: #D9C4A0;
+  --sheet: #FAFAF8;
+  --paper: #F1F2EE;
+  --ink: #17201D;
+  --muted: #59655F;
+  --line: #CBD0C8;
+  --backdrop: #D6DAD3;
+  --on-dark: #EEF0EA;
+  --on-dark-muted: #A9B8B0;
+  --display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--backdrop);
+  color: var(--ink);
+  font-family: var(--body);
+  padding-block: 24px;
+  padding-inline: 16px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+img { max-width: 100%; display: block; }
+
+/* ---------- sheet ---------- */
+.page {
+  position: relative;
+  width: min(100%, 816px);
+  aspect-ratio: 8.5 / 11;
+  margin: 0 auto 24px;
+  background: var(--sheet);
+  container-type: inline-size;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgb(10 30 24 / .08), 0 14px 36px rgb(10 30 24 / .16);
+}
+.sheet {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 5.4cqw 6.6cqw 4.4cqw;
+}
+.content { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 2.6cqw; padding-top: 3.2cqw; }
+
+/* running header + footer */
+.run, .foot {
+  display: flex; justify-content: space-between; align-items: center;
+  font: 500 1.05cqw/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
+}
+.run { padding-bottom: 1.5cqw; border-bottom: .12cqw solid var(--line); }
+.foot { margin-top: auto; padding-top: 1.4cqw; border-top: .12cqw solid var(--line); font-weight: 400; }
+.foot b { font-weight: 500; color: var(--ink); }
+
+/* brand */
+.brand { display: flex; align-items: center; gap: .9cqw; color: var(--spruce); }
+.brand svg { width: 2.6cqw; height: 2.6cqw; flex: none; }
+.brand .word { font: 800 1.45cqw/1 var(--display); font-stretch: 125%; letter-spacing: .14em; }
+
+/* type */
+.eyebrow { font: 500 1.15cqw/1.2 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--brass); margin: 0; }
+h1, h2, h3, h4 { margin: 0; text-wrap: balance; }
+h2 { font: 760 4.5cqw/1.02 var(--display); font-stretch: 112%; letter-spacing: -.01em; color: var(--spruce); }
+h3 { font: 720 2.6cqw/1.08 var(--display); font-stretch: 108%; color: var(--spruce); }
+p { margin: 0; font-size: 1.5cqw; line-height: 1.55; }
+.lead { font-size: 1.95cqw; line-height: 1.45; color: var(--ink); }
+.muted { color: var(--muted); }
+.title-block { display: grid; gap: 1.3cqw; }
+
+/* lists */
+.lbl { font: 500 1.02cqw/1 var(--mono); letter-spacing: .15em; text-transform: uppercase; color: var(--muted); padding-bottom: .75cqw; border-bottom: .12cqw solid var(--line); margin: 0 0 .9cqw; }
+.dash { list-style: none; margin: 0; padding: 0; display: grid; gap: .55cqw; font-size: 1.42cqw; line-height: 1.4; }
+.dash li { position: relative; padding-left: 1.5cqw; }
+.dash li::before { content: ""; position: absolute; left: 0; top: .84cqw; width: .75cqw; height: .14cqw; background: var(--brass); }
+.chips { display: flex; flex-wrap: wrap; gap: .55cqw; align-items: center; align-content: flex-start; }
+.chip { font-size: 1.25cqw; line-height: 1; padding: .55cqw .85cqw; border: .12cqw solid var(--line); border-radius: 99cqw; color: var(--ink); background: #fff; }
+
+/* ---------- cover ---------- */
+.cover { background: var(--spruce); color: var(--on-dark); }
+.cover .hero { position: absolute; inset: 0 0 auto 0; height: 78cqw; }
+.cover .hero img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+.cover .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgb(21 48 42 / .62) 0%, rgb(21 48 42 / 0) 24%, rgb(21 48 42 / 0) 58%, var(--spruce) 100%); }
+.cover .topbar { position: absolute; top: 5.4cqw; left: 6.6cqw; right: 6.6cqw; display: flex; justify-content: space-between; align-items: center; z-index: 1; }
+.cover .brand { color: var(--on-dark); gap: 1.3cqw; }
+.cover .brand svg { width: 4.4cqw; height: 4.4cqw; }
+.cover .brand .word { font-size: 2.7cqw; }
+.cover .edition { font: 500 1.15cqw/1 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--on-dark); }
+.cover .bottom { position: absolute; left: 6.6cqw; right: 6.6cqw; bottom: 5.6cqw; display: grid; gap: 2.4cqw; }
+.cover h1 { font: 820 8cqw/.94 var(--display); font-stretch: 125%; text-transform: uppercase; letter-spacing: -.005em; color: var(--on-dark); }
+.cover .sub { font-size: 2cqw; line-height: 1.45; color: var(--on-dark-muted); max-width: 62cqw; }
+.cover .rule { height: .18cqw; background: var(--brass); width: 12cqw; }
+.cover .lines { display: flex; flex-wrap: wrap; gap: .9cqw 2.2cqw; font: 500 1.08cqw/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--brass-soft); border-top: .12cqw solid rgb(238 240 234 / .18); padding-top: 2cqw; }
+
+/* ---------- about ---------- */
+.about-grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 4cqw; align-items: start; }
+.about-grid .copy { display: grid; gap: 1.4cqw; }
+.facts { margin: 0; display: grid; border-top: .12cqw solid var(--line); }
+.facts div { display: grid; grid-template-columns: 1fr auto; gap: 1cqw; padding: 1.05cqw 0; border-bottom: .12cqw solid var(--line); align-items: baseline; }
+.facts dt { font: 500 1.02cqw/1.2 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 0; font: 700 1.55cqw/1.2 var(--display); font-stretch: 105%; color: var(--spruce); text-align: right; font-variant-numeric: tabular-nums; }
+.bleed { margin-inline: -6.6cqw; max-width: none; }
+.band { height: 33cqw; width: calc(100% + 13.2cqw); object-fit: cover; object-position: 50% 55%; }
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3cqw; }
+.three > div { display: grid; gap: .9cqw; align-content: start; }
+.three h3 { font-size: 2.3cqw; }
+.three p { font-size: 1.5cqw; }
+
+/* ---------- why choose ---------- */
+.why { display: grid; grid-template-columns: 5fr 7fr; gap: 4cqw; flex: 1; min-height: 0; }
+.why .photo { position: relative; min-height: 0; }
+.why .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; }
+.why .photo .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.4cqw 1.6cqw; font: 500 1cqw/1.3 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: #fff; background: linear-gradient(to top, rgb(10 25 20 / .75), rgb(10 25 20 / 0)); }
+.reasons { display: grid; align-content: start; }
+.reason { display: grid; gap: .8cqw; padding: 2cqw 0; border-bottom: .12cqw solid var(--line); }
+.reason:first-child { padding-top: 0; }
+.reason h3 { font-size: 2.25cqw; }
+.reason p { font-size: 1.42cqw; color: var(--muted); }
+
+/* ---------- product blocks ---------- */
+.prod { display: grid; gap: 1.4cqw; }
+.prod + .prod { padding-top: 2.4cqw; border-top: .12cqw solid var(--line); }
+.prod .shot { height: 29.5cqw; width: 100%; object-fit: cover; }
+.prod-head { display: flex; justify-content: space-between; align-items: baseline; gap: 2cqw; }
+.prod-head h3 { font-size: 3cqw; }
+.tag { font: 500 1.05cqw/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--brass); text-align: right; }
+.pitch { font-size: 1.72cqw; line-height: 1.45; max-width: 70cqw; }
+.cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6cqw; }
+
+/* expandable feature page */
+.hero-shot { height: 34cqw; width: 100%; object-fit: cover; object-position: 50% 60%; }
+.feature-grid { display: grid; grid-template-columns: 1.08fr 1fr; gap: 3.4cqw; align-items: start; }
+.spec { width: 100%; border-collapse: collapse; font-size: 1.25cqw; font-variant-numeric: tabular-nums; }
+.spec th, .spec td { text-align: left; padding: .78cqw .4cqw; border-bottom: .12cqw solid var(--line); vertical-align: top; }
+.spec thead th { font: 500 1.02cqw/1.2 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); border-bottom-color: var(--spruce); }
+.spec tbody th { font: 500 1.02cqw/1.35 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 500; width: 30%; }
+.spec td { font-family: var(--mono); font-size: 1.2cqw; color: var(--ink); }
+.note { font-size: 1.12cqw; color: var(--muted); margin-top: .9cqw; }
+.stack { display: grid; gap: 1.8cqw; }
+.strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2cqw; }
+.strip figure { margin: 0; display: grid; gap: .7cqw; }
+.strip img { height: 14.5cqw; width: 100%; object-fit: cover; }
+figcaption { font: 500 .98cqw/1.2 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+/* ---------- customization ---------- */
+.cust { display: grid; grid-template-columns: 1fr 1fr; gap: 3.4cqw 3.4cqw; }
+.cust section { display: grid; gap: 1.1cqw; align-content: start; border-top: .18cqw solid var(--spruce); padding-top: 1.5cqw; }
+.cust .wide { grid-column: 1 / -1; grid-template-columns: 1.25fr 1fr; gap: 1.1cqw 3.4cqw; }
+.cust .wide .imgs { grid-row: span 3; display: grid; grid-template-columns: 1.7fr 1fr; gap: 1cqw; }
+.cust .wide .imgs img { width: 100%; height: 24cqw; object-fit: cover; background: #fff; }
+.cust .wide .imgs img.contain { object-fit: contain; }
+.cust h3 { font-size: 2.4cqw; }
+.cust p { font-size: 1.5cqw; color: var(--muted); }
+.scale { display: grid; gap: 1cqw; margin-top: .4cqw; }
+.scale .row { display: grid; grid-template-columns: 5.5cqw 1fr; align-items: center; gap: 1cqw; font: 500 1.12cqw/1 var(--mono); letter-spacing: .08em; color: var(--muted); }
+.scale .bar { display: flex; gap: .3cqw; height: 2.2cqw; }
+.scale .bar i { flex: 0 0 calc(25% - .225cqw); background: var(--spruce-2); }
+.scale .axis { display: flex; justify-content: space-between; margin-left: 7cqw; font: 400 .95cqw/1 var(--mono); color: var(--muted); }
+.swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1cqw; }
+.sw { display: grid; gap: .55cqw; font: 500 .98cqw/1.2 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.sw i { display: block; height: 5.6cqw; border: .12cqw solid var(--line); }
+.sw-white i { background: #F4F4F1; }
+.sw-black i { background: #1D2022; }
+.sw-graphite i { background: #5C6266; }
+.sw-wood i { background: repeating-linear-gradient(90deg, #9A6233 0 .5cqw, #A86C3A .5cqw 1.1cqw, #8F5A2E 1.1cqw 1.5cqw); }
+.sw-grey i { background: #B9BDB8; }
+.sw-sand i { background: #CDBFA6; }
+.sw-group { display: grid; gap: .7cqw; }
+
+/* ---------- gallery ---------- */
+.gallery { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 1fr); gap: 1.2cqw; }
+.gallery figure { margin: 0; position: relative; overflow: hidden; min-height: 0; background: var(--paper); }
+.gallery img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.gallery figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.4cqw 1.2cqw 1cqw; color: #fff; background: linear-gradient(to top, rgb(8 20 16 / .72), rgb(8 20 16 / 0)); }
+.g-tall { grid-row: span 2; }
+.g-wide { grid-column: span 2; }
+.fine { font-size: 1.08cqw; line-height: 1.5; color: var(--muted); }
+
+/* ---------- process ---------- */
+.steps { display: grid; border-top: .18cqw solid var(--spruce); }
+.step { display: grid; grid-template-columns: 7cqw 1fr 23cqw; gap: 2.4cqw; padding: 2.3cqw 0; border-bottom: .12cqw solid var(--line); align-items: start; }
+.step .num { font: 800 3.6cqw/1 var(--display); font-stretch: 125%; color: var(--brass); font-variant-numeric: tabular-nums; }
+.step h3 { font-size: 2.3cqw; margin-bottom: .7cqw; }
+.step p { font-size: 1.5cqw; color: var(--muted); }
+.step .get { display: grid; gap: .5cqw; }
+.step .get span { font: 500 .98cqw/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
+.step .get b { font-size: 1.36cqw; line-height: 1.4; font-weight: 600; color: var(--ink); }
+.process-photo { flex: 1; min-height: 16cqw; height: auto; width: calc(100% + 13.2cqw); object-fit: cover; object-position: 50% 45%; }
+
+/* ---------- promise page ---------- */
+.promise { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3cqw; }
+.promise > div { display: grid; gap: .9cqw; align-content: start; border-top: .18cqw solid var(--spruce); padding-top: 1.5cqw; }
+.promise h3 { font-size: 2cqw; }
+.promise p { font-size: 1.36cqw; color: var(--muted); }
+.quality { display: grid; grid-template-columns: 1.35fr 1fr; gap: 3.4cqw; flex: 1; min-height: 0; }
+.quality .photo { position: relative; min-height: 0; }
+.quality .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; }
+.checks li { display: grid; grid-template-columns: 2.6cqw 1fr; gap: 1cqw; padding: 1.2cqw 0; border-bottom: .12cqw solid var(--line); font-size: 1.45cqw; line-height: 1.4; align-items: start; }
+.checks svg { width: 2cqw; height: 2cqw; color: var(--brass); margin-top: .15cqw; }
+.checks b { display: block; font-weight: 650; color: var(--ink); }
+.checks span { color: var(--muted); font-size: 1.3cqw; }
+.satisfaction { background: var(--spruce); color: var(--on-dark); padding: 3cqw 6.6cqw; display: grid; grid-template-columns: 1.1fr 1fr; gap: 4cqw; align-items: center; }
+.satisfaction h3 { color: var(--on-dark); font-size: 2.7cqw; }
+.satisfaction p { color: var(--on-dark-muted); font-size: 1.42cqw; }
+.satisfaction ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .9cqw; }
+.satisfaction li { font-size: 1.4cqw; line-height: 1.35; padding-left: 2cqw; position: relative; color: var(--on-dark); }
+.satisfaction li::before { content: ""; position: absolute; left: 0; top: .55cqw; width: .9cqw; height: .9cqw; border: .16cqw solid var(--brass); }
+
+/* ---------- back cover ---------- */
+.back { background: var(--spruce); color: var(--on-dark); }
+.back .sheet { padding: 6.6cqw; }
+.back .brand { color: var(--on-dark); gap: 1.3cqw; }
+.back .brand svg { width: 4.4cqw; height: 4.4cqw; }
+.back .brand .word { font-size: 2.7cqw; }
+.back h2 { color: var(--on-dark); font-size: 7cqw; font-stretch: 120%; line-height: .98; margin-top: 12cqw; }
+.back .lead { color: var(--on-dark-muted); max-width: 66cqw; margin-top: 2.6cqw; }
+.contact { margin-top: 5cqw; display: grid; grid-template-columns: 1fr 1fr; border-top: .12cqw solid rgb(238 240 234 / .2); }
+.contact div { padding: 1.9cqw 0; border-bottom: .12cqw solid rgb(238 240 234 / .2); display: grid; gap: .8cqw; }
+.contact div:nth-child(odd) { padding-right: 3cqw; }
+.contact div:nth-child(even) { padding-left: 3cqw; border-left: .12cqw solid rgb(238 240 234 / .2); }
+.contact div.span2 { grid-column: 1 / -1; padding-left: 0; border-left: 0; }
+.contact span { font: 500 1.02cqw/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--brass-soft); }
+.contact b { font: 600 1.85cqw/1.25 var(--body); color: var(--on-dark); }
+.cta { margin-top: 4cqw; display: flex; justify-content: space-between; align-items: center; gap: 3cqw; padding: 2.4cqw 2.8cqw; border: .16cqw solid var(--brass); }
+.cta strong { font: 760 2.3cqw/1.1 var(--display); font-stretch: 110%; color: var(--on-dark); }
+.cta span { font-size: 1.38cqw; color: var(--on-dark-muted); max-width: 40cqw; line-height: 1.45; }
+.back .fine { margin-top: auto; color: var(--on-dark-muted); border-top: .12cqw solid rgb(238 240 234 / .2); padding-top: 1.6cqw; font-size: 1.02cqw; }
+
+
+/* ---------- model range cards ---------- */
+.range { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.8cqw 1.8cqw; }
+.card { display: grid; gap: .9cqw; align-content: start; min-width: 0; }
+.card img { width: 100%; height: 21cqw; object-fit: cover; background: var(--paper); }
+.card img.contain { object-fit: contain; background: #fff; border: .12cqw solid var(--line); }
+.card h4 { font: 720 1.85cqw/1.12 var(--display); font-stretch: 106%; color: var(--spruce); }
+.card .sl { font: 500 .98cqw/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--brass); }
+.card p { font-size: 1.3cqw; line-height: 1.42; color: var(--muted); }
+.card.info { background: var(--spruce); color: var(--on-dark); padding: 2cqw; align-content: space-between; height: 100%; }
+.card.info h4 { color: var(--on-dark); }
+.card.info dl { margin: 0; display: grid; gap: 1.1cqw; }
+.card.info dt { font: 500 .95cqw/1.2 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--brass-soft); }
+.card.info dd { margin: .3cqw 0 0; font-size: 1.32cqw; line-height: 1.35; color: var(--on-dark); }
+.range-note { display: flex; justify-content: space-between; align-items: center; gap: 3cqw; padding-top: 2cqw; border-top: .12cqw solid var(--line); }
+.range-note p { font-size: 1.4cqw; color: var(--muted); max-width: 46cqw; }
+
+/* ---------- interiors ---------- */
+.interiors { flex: 1; min-height: 0; display: grid; grid-template-columns: 1.25fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 1.4cqw; }
+.interiors figure { margin: 0; display: grid; grid-template-rows: 1fr auto; gap: .8cqw; min-height: 0; }
+.interiors .ph { position: relative; min-height: 0; }
+.interiors .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.finishes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.4cqw; padding-top: 1.8cqw; border-top: .12cqw solid var(--line); }
+.finishes div { display: grid; gap: .5cqw; }
+.finishes span { font: 500 .98cqw/1.2 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.finishes b { font-size: 1.38cqw; line-height: 1.35; font-weight: 600; color: var(--ink); }
+
+
+/* ---------- product page (pp) ---------- */
+.pp-hero { flex: 1; min-height: 30cqw; height: auto; width: 100%; object-fit: cover; }
+.pp-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2cqw; }
+.pp-thumbs figure { margin: 0; display: grid; gap: .6cqw; }
+.pp-thumbs img { height: 17cqw; width: 100%; object-fit: cover; background: var(--paper); }
+.ideal { display: flex; align-items: center; flex-wrap: wrap; gap: 1.2cqw 1.6cqw; padding-top: 1.6cqw; border-top: .12cqw solid var(--line); }
+.ideal .k { font: 500 1.02cqw/1 var(--mono); letter-spacing: .15em; text-transform: uppercase; color: var(--brass); }
+
+/* ---------- solutions overview ---------- */
+.sol { display: grid; grid-template-columns: 1fr 1fr; gap: 2.6cqw 2.8cqw; }
+.sol article { display: grid; gap: 1cqw; align-content: start; min-width: 0; }
+.sol img { width: 100%; height: 18.5cqw; object-fit: cover; }
+.sol h3 { font-size: 2.3cqw; }
+.sol .chips .chip { font-size: 1.28cqw; }
+.sol .statement { background: var(--spruce); color: var(--on-dark); padding: 2.6cqw; align-content: center; gap: 1.4cqw; }
+.sol .statement p.big { font: 700 2.25cqw/1.25 var(--display); font-stretch: 104%; color: var(--on-dark); }
+.sol .statement p { color: var(--on-dark-muted); font-size: 1.4cqw; }
+
+/* ---------- category mosaic ---------- */
+.mosaic { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 1.2cqw; }
+.mosaic figure, .gal figure { margin: 0; position: relative; overflow: hidden; min-height: 0; background: var(--paper); }
+.mosaic img, .gal img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mosaic figcaption, .gal figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.6cqw 1.2cqw 1cqw; color: #fff; background: linear-gradient(to top, rgb(8 20 16 / .74), rgb(8 20 16 / 0)); }
+.m-big { grid-column: span 2; grid-row: span 2; }
+.types { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4cqw 2cqw; padding-top: 1.8cqw; border-top: .18cqw solid var(--spruce); }
+.types div { display: grid; gap: .45cqw; align-content: start; }
+.types b { font: 700 1.55cqw/1.15 var(--display); font-stretch: 104%; color: var(--spruce); }
+.types span { font-size: 1.22cqw; line-height: 1.4; color: var(--muted); }
+
+/* ---------- gallery ---------- */
+.gal { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 1fr); gap: 1.2cqw; }
+.g-big { grid-column: span 2; grid-row: span 2; }
+.g-tall2 { grid-row: span 2; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2cqw; padding-top: 1.6cqw; border-top: .18cqw solid var(--spruce); }
+.stats div { display: grid; gap: .5cqw; }
+.stats b { font: 760 2.1cqw/1.1 var(--display); font-stretch: 110%; color: var(--spruce); }
+.stats span { font-size: 1.2cqw; line-height: 1.4; color: var(--muted); }
+
+/* ---------- why choose (6) ---------- */
+.why6 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3.2cqw; }
+.why6 .reason { grid-template-columns: 2.6cqw 1fr; column-gap: 1.2cqw; }
+.why6 .reason svg { width: 2.1cqw; height: 2.1cqw; color: var(--brass); grid-row: span 2; margin-top: .2cqw; }
+.why6 .reason:nth-child(-n+2) { padding-top: 0; }
+.why-band { flex: 1; min-height: 30cqw; height: auto; width: calc(100% + 13.2cqw); object-fit: cover; object-position: 50% 45%; }
+
+/* ---------- customization (8) ---------- */
+.cust8 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.6cqw 1.8cqw; }
+.cust8 article { display: grid; gap: .9cqw; align-content: start; min-width: 0; }
+.cust8 .vis { height: 24cqw; width: 100%; object-fit: cover; background: #fff; border: .12cqw solid var(--line); display: block; }
+.cust8 img.vis.contain { object-fit: contain; }
+.cust8 h3 { font-size: 2cqw; }
+.cust8 p { font-size: 1.36cqw; line-height: 1.42; color: var(--muted); }
+.vis.swatch6 { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: .5cqw; padding: .8cqw; }
+.vis.swatch6 i { display: block; border: .12cqw solid var(--line); }
+.vis.mats { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: .5cqw; padding: .8cqw; }
+.vis.mats div { display: flex; align-items: flex-end; padding: .5cqw .6cqw; font: 500 .85cqw/1.1 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.m-wood { background: repeating-linear-gradient(90deg, #9A6233 0 .5cqw, #A86C3A .5cqw 1.1cqw, #8F5A2E 1.1cqw 1.5cqw); color: #fff; }
+.m-metal { background: repeating-linear-gradient(90deg, #6E7479 0 1.6cqw, #5C6266 1.6cqw 1.9cqw); color: #fff; }
+.m-bamboo { background: repeating-linear-gradient(90deg, #D9C39A 0 .9cqw, #CDB487 .9cqw 1.4cqw); color: #3b2d17; }
+.m-panel { background: repeating-linear-gradient(0deg, #F1F1EE 0 2.4cqw, #D8DAD5 2.4cqw 2.55cqw); color: #3a3f3c; }
+.vis.sizes { display: grid; align-content: center; gap: 1cqw; padding: 1.4cqw; }
+.vis.sizes .row { display: grid; grid-template-columns: 4.6cqw 1fr; align-items: center; gap: .8cqw; font: 500 1cqw/1 var(--mono); color: var(--muted); }
+.vis.sizes .bar { display: flex; gap: .25cqw; height: 1.8cqw; }
+.vis.sizes .bar i { flex: 0 0 calc(25% - .19cqw); background: var(--spruce-2); }
+.project-band { display: flex; justify-content: space-between; align-items: center; gap: 3cqw; background: var(--spruce); color: var(--on-dark); padding: 2.4cqw 2.8cqw; }
+.project-band strong { font: 760 2.2cqw/1.15 var(--display); font-stretch: 108%; }
+.project-band span { font-size: 1.36cqw; color: var(--on-dark-muted); max-width: 46cqw; line-height: 1.45; }
+
+/* ---------- process (visual) ---------- */
+.steps.tight .step { padding: 1.6cqw 0; }
+.pstrip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2cqw; flex: 1; min-height: 0; }
+.pstrip figure { margin: 0; display: grid; grid-template-rows: 1fr auto; gap: .7cqw; min-height: 0; }
+.pstrip .ph { position: relative; min-height: 0; }
+.pstrip .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pstrip figcaption b { color: var(--brass); font-weight: 500; margin-right: .6cqw; }
+
+/* ---------- pillars ---------- */
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.4cqw 2.8cqw; }
+.pillars > div { display: grid; gap: .8cqw; align-content: start; border-top: .18cqw solid var(--spruce); padding-top: 1.4cqw; }
+.pillars h3 { font-size: 2.1cqw; }
+.pillars p { font-size: 1.36cqw; color: var(--muted); }
+.pillars .note-cell { background: var(--spruce); border-top-color: var(--brass); padding: 1.6cqw 1.8cqw; }
+.pillars .note-cell h3 { color: var(--on-dark); }
+.pillars .note-cell p { color: var(--on-dark-muted); }
+.range .card img { height: 27cqw; }
+.range { gap: 3.2cqw 1.8cqw; }
+
+/* ---------- trust ---------- */
+.trust-hero { position: relative; height: 30cqw; margin-inline: -6.6cqw; overflow: hidden; }
+.trust-hero img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+.trust-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(21 48 42 / .88) 0%, rgb(21 48 42 / .55) 46%, rgb(21 48 42 / 0) 78%); }
+.trust-hero .msg { position: absolute; left: 6.6cqw; top: 0; bottom: 0; display: grid; align-content: center; gap: 1.2cqw; max-width: 46cqw; z-index: 1; }
+.trust-hero .msg p { color: var(--on-dark); font: 700 2.7cqw/1.18 var(--display); font-stretch: 106%; margin: 0; }
+.trust-hero .msg span { color: var(--brass-soft); font: 500 1.05cqw/1.3 var(--mono); letter-spacing: .16em; text-transform: uppercase; }
+.trust8 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3.2cqw 2.2cqw; flex: 1; align-content: start; }
+.trust8 article { display: grid; gap: .9cqw; align-content: start; padding-top: 1.6cqw; border-top: .18cqw solid var(--spruce); }
+.trust8 svg { width: 3.4cqw; height: 3.4cqw; color: var(--brass); }
+.trust8 h3 { font-size: 2.05cqw; line-height: 1.12; }
+.trust8 p { font-size: 1.42cqw; line-height: 1.45; color: var(--muted); }
+.assure { display: flex; justify-content: space-between; align-items: center; gap: 3cqw; padding: 2.2cqw 2.6cqw; border: .16cqw solid var(--brass); }
+.assure strong { font: 760 2.2cqw/1.15 var(--display); font-stretch: 108%; color: var(--spruce); }
+.assure span { font-size: 1.36cqw; color: var(--muted); max-width: 44cqw; line-height: 1.45; }
+
+/* ---------- hierarchy overview ---------- */
+.lvl { display: flex; align-items: baseline; justify-content: space-between; gap: 2cqw; border-bottom: .18cqw solid var(--spruce); padding-bottom: .8cqw; }
+.lvl b { font: 760 2cqw/1 var(--display); font-stretch: 110%; color: var(--spruce); }
+.lvl span { font: 500 1.02cqw/1 var(--mono); letter-spacing: .15em; text-transform: uppercase; color: var(--brass); }
+.core4 { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2cqw 2.4cqw; }
+.core4 article { display: grid; gap: .7cqw; }
+.core4 img { width: 100%; height: 19cqw; object-fit: cover; }
+.core4 h3 { font-size: 2.4cqw; display: flex; justify-content: space-between; align-items: baseline; }
+.core4 h3 small { font: 500 1.02cqw/1 var(--mono); letter-spacing: .12em; color: var(--brass); }
+.core4 p { font-size: 1.36cqw; color: var(--muted); }
+.more8 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.6cqw 1.4cqw; }
+.more8 article { display: grid; gap: .55cqw; }
+.more8 img { width: 100%; height: 9.5cqw; object-fit: cover; }
+.more8 h4 { font: 700 1.42cqw/1.15 var(--display); font-stretch: 104%; color: var(--spruce); margin: 0; }
+
+/* ---------- section divider ---------- */
+.divider { background: var(--spruce); color: var(--on-dark); }
+.divider .hero { position: absolute; inset: 0 0 auto 0; height: 70cqw; }
+.divider .hero img { width: 100%; height: 100%; object-fit: cover; }
+.divider .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgb(21 48 42 / .78) 0%, rgb(21 48 42 / 0) 26%, rgb(21 48 42 / .2) 60%, var(--spruce) 100%); }
+.divider .body { position: absolute; left: 6.6cqw; right: 6.6cqw; bottom: 6cqw; display: grid; gap: 2.2cqw; }
+.divider .num { font: 500 1.15cqw/1 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--brass-soft); }
+.divider h2 { color: var(--on-dark); font-size: 7cqw; font-stretch: 120%; line-height: .96; text-transform: uppercase; }
+.divider .intro { color: var(--on-dark-muted); font-size: 1.85cqw; line-height: 1.45; max-width: 62cqw; }
+.toc { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4cqw; border-top: .12cqw solid rgb(238 240 234 / .22); }
+.toc div { display: flex; justify-content: space-between; align-items: baseline; padding: 1.25cqw 0; border-bottom: .12cqw solid rgb(238 240 234 / .22); }
+.toc b { font: 650 1.75cqw/1.2 var(--body); color: var(--on-dark); }
+.toc span { font: 500 1.05cqw/1 var(--mono); letter-spacing: .1em; color: var(--brass-soft); }
+.divider .topbar { position: absolute; top: 5.4cqw; left: 6.6cqw; right: 6.6cqw; display: flex; justify-content: space-between; z-index: 1; }
+.divider .brand { color: var(--on-dark); }
+
+/* ---------- core product extras ---------- */
+.badge-core { display: inline-flex; align-items: center; gap: .7cqw; font: 500 1.05cqw/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--brass); }
+.badge-core i { width: .9cqw; height: .9cqw; background: var(--brass); display: inline-block; }
+.why-it { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6cqw; }
+.why-it div { background: var(--spruce); color: var(--on-dark); padding: 1.6cqw 1.8cqw; display: grid; gap: .5cqw; align-content: start; }
+.why-it b { font: 720 1.75cqw/1.15 var(--display); font-stretch: 104%; }
+.why-it span { font-size: 1.28cqw; line-height: 1.42; color: var(--on-dark-muted); }
+
+/* ---------- journey (6 steps) ---------- */
+.journey { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; gap: 2.4cqw 2cqw; }
+.jstep { display: grid; grid-template-rows: 1fr 13.5cqw; gap: 1.1cqw; min-height: 0; }
+.jstep .vis { position: relative; min-height: 0; overflow: hidden; background: var(--spruce); }
+.jstep .vis img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.jstep .vis svg.icon { position: absolute; left: 50%; top: 50%; width: 9cqw; height: 9cqw; transform: translate(-50%, -50%); color: var(--brass-soft); }
+.jstep .vis .n { position: absolute; left: 1.2cqw; top: 1.2cqw; z-index: 1; background: var(--sheet); color: var(--spruce); font: 800 1.9cqw/1 var(--display); font-stretch: 120%; padding: .55cqw .8cqw; font-variant-numeric: tabular-nums; }
+.jstep h3 { font-size: 2.05cqw; }
+.jstep p { font-size: 1.3cqw; line-height: 1.42; color: var(--muted); }
+.jstep .get { font-size: 1.22cqw; line-height: 1.35; color: var(--ink); }
+.jstep .get b { font: 500 .95cqw/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); margin-right: .5cqw; }
+.jtext { display: grid; gap: .6cqw; }
+.flow { display: flex; align-items: center; gap: 1cqw; font: 500 1.02cqw/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.flow i { flex: 1; height: .14cqw; background: var(--line); }
+
+/* ---------- FAQ ---------- */
+.faq { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3.4cqw; }
+.faq div { padding: 3.2cqw 0; border-bottom: .12cqw solid var(--line); display: grid; gap: .7cqw; align-content: start; }
+.faq div:nth-child(-n+2) { border-top: .18cqw solid var(--spruce); }
+.faq b { font: 700 2.05cqw/1.2 var(--display); font-stretch: 104%; color: var(--spruce); }
+.faq p { font-size: 1.52cqw; line-height: 1.55; color: var(--muted); }
+
+/* ---------- next steps (contact) ---------- */
+.next3 { margin-top: 3.4cqw; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2cqw; }
+.next3 div { border-top: .16cqw solid var(--brass); padding-top: 1.3cqw; display: grid; gap: .6cqw; }
+.next3 span { font: 500 1.02cqw/1 var(--mono); letter-spacing: .16em; color: var(--brass-soft); }
+.next3 b { font: 650 1.6cqw/1.25 var(--body); color: var(--on-dark); }
+.back h2.contact-h { margin-top: 7cqw; }
+.cust8 .vis { height: 27cqw; }
+
+/* ---------- print ---------- */
+@page { size: 8.5in 11in; margin: 0; }
+@media print {
+  body { background: #fff; padding: 0; }
+  .page { width: 8.5in; height: 11in; aspect-ratio: auto; margin: 0; box-shadow: none; break-after: page; }
+  .page:last-child { break-after: auto; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mark" viewBox="0 0 48 48">
+      <path d="M5 22 L24 8 L43 22" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="square" stroke-linejoin="miter"/>
+      <rect x="10" y="25.5" width="28" height="15" fill="none" stroke="currentColor" stroke-width="4.2"/>
+      <path d="M24 25.5 V40.5" stroke="currentColor" stroke-width="3"/>
+      <path d="M30.5 33 H35" stroke="#B08A4E" stroke-width="3"/>
+    </symbol>
+    <symbol id="check" viewBox="0 0 20 20">
+      <rect x="1" y="1" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M5.5 10.5 L8.6 13.4 L14.6 6.8" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+  
+    <symbol id="i-custom" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/><path d="M4 20h16"/></g></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></g></symbol>
+    <symbol id="i-design" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16"/><path d="M3 10h9v10"/><path d="M12 14h9"/></g></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="3" width="6" height="5"/><rect x="2" y="16" width="6" height="5"/><rect x="16" y="16" width="6" height="5"/><path d="M12 8v4M5 16v-4h14v4"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l8 3v6c0 4.6-3.2 7.8-8 9.5C7.2 19.8 4 16.6 4 12V6z"/><path d="M8.5 12.2l2.4 2.3 4.6-4.9"/></g></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c.8-4.2 4-6.5 8-6.5s7.2 2.3 8 6.5"/></g></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16v11H10l-4 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></g></symbol>
+    <symbol id="i-hand" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7.5 9a3 3 0 100 6c1.9 0 3-1.4 4.5-3s2.6-3 4.5-3a3 3 0 110 6c-1.9 0-3-1.4-4.5-3S9.4 9 7.5 9z"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3h4l1.5 5-2.5 1.5a11 11 0 005.5 5.5L16 12.5l5 1.5v4a3 3 0 01-3 3C10 21 3 14 3 6a3 3 0 013-3z"/></g></symbol>
+    <symbol id="i-talk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h12v8H8l-3 3v-3H3z"/><path d="M15 8h6v8h-2v3l-3-3h-5v-4"/></g></symbol>
+  </defs>
+</svg>
+
+<section class="page cover" aria-label="Cover">
+  <div class="hero"><img src="img/backyard-studio-c.jpg" alt="Wood-clad backyard studio with glass doors and a solar roof"></div>
+  <div class="topbar">
+    <div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div>
+    <span class="edition">Product Catalogue · 2026</span>
+  </div>
+  <div class="bottom">
+    <p class="eyebrow">KIKFIA</p>
+    <h1>Custom<br>Portable<br>Houses</h1>
+    <div class="rule"></div>
+    <p class="sub"><strong style="color:var(--on-dark);font-weight:600">Custom Portable Housing Solutions.</strong> ADUs, expandable, tiny and modular homes, plus complete modular buildings for business, hospitality and community projects.</p>
+    <div class="lines"><span>ADU Houses</span><span>Expandable Houses</span><span>Tiny Houses</span><span>Modular Homes</span><span>Commercial &amp; Community Projects</span></div>
+  </div>
+</section>
+
+<section class="page" aria-label="About KIKFIA">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>About KIKFIA</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">About KIKFIA</p>
+        <h2>Your partner for portable and modular buildings.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="copy">
+          <p class="lead">KIKFIA helps homeowners, investors, businesses and institutions get quality space faster, with a custom design and one team supporting them from first idea to final installation.</p>
+          <p>We work with an established network of manufacturing partners and match every project to the right building system: expandable, folding, modular or steel structure. You choose the layout, finishes and options. We coordinate design, production, shipping and installation support.</p>
+          <p>Whether you need one backyard ADU or a complete resort, school or workforce site, you get the same care, clear communication and written commitments.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Sectors served</dt><dd>5</dd></div>
+          <div><dt>Project size</dt><dd>1 unit to full sites</dd></div>
+          <div><dt>Design</dt><dd>Custom every time</dd></div>
+          <div><dt>Build</dt><dd>Factory-made quality</dd></div>
+          <div><dt>Delivery</dt><dd>U.S. &amp; worldwide</dd></div>
+        </dl>
+      </div>
+      <img class="band bleed" src="img/villa-panorama-c2.jpg" alt="Single-story modular villa with full-height glass walls and a landscaped garden">
+      <div class="three" style="grid-template-columns:repeat(4,1fr);gap:2.4cqw">
+        <div><p class="eyebrow">Mission</p><h3>Better space, sooner.</h3><p>Make quality living and working space faster and simpler to own.</p></div>
+        <div><p class="eyebrow">Vision</p><h3>A building for every plan.</h3><p>Adding a home, an office or a whole site should feel easy and predictable.</p></div>
+        <div><p class="eyebrow">Quality</p><h3>Confirmed in writing.</h3><p>Materials, sizes and finishes are agreed before production starts.</p></div>
+        <div><p class="eyebrow">Customization</p><h3>Built your way.</h3><p>Every design is adapted to your site, your use and your style.</p></div>
+      </div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>02 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Why customers trust KIKFIA">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>Why customers trust us</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Why customers trust KIKFIA</p>
+        <h2>Confidence at every step of your project.</h2>
+      </div>
+      <div class="trust-hero"><img src="img/p-office-install-clean.jpg" alt="Two-story modular building being installed with a crane"><div class="msg"><span>Peace of mind</span><p>One partner from your first question to final installation.</p></div></div>
+      <div class="trust8"><article><svg><use href="#i-custom"/></svg><h3>Customized Solutions</h3><p>Every building is planned around your site, your budget and how you will use it.</p></article><article><svg><use href="#i-globe"/></svg><h3>International Project Support</h3><p>We coordinate production, shipping and documents for projects in the U.S. and abroad.</p></article><article><svg><use href="#i-design"/></svg><h3>Professional Design Assistance</h3><p>Floor plans, finishes and drawings are prepared for your approval before anything is built.</p></article><article><svg><use href="#i-network"/></svg><h3>Manufacturing Partner Network</h3><p>Established factories matched to each product, from a single home to a complete site.</p></article><article><svg><use href="#i-shield"/></svg><h3>Quality-Focused Approach</h3><p>Galvanized steel structures, specifications confirmed in writing and checks before shipping.</p></article><article><svg><use href="#i-person"/></svg><h3>Customer-Centered Service</h3><p>One dedicated contact who answers clearly and keeps you informed at every step.</p></article><article><svg><use href="#i-chat"/></svg><h3>Project Consultation Support</h3><p>A free consultation to choose the right model, size and options for your goals.</p></article><article><svg><use href="#i-hand"/></svg><h3>Long-Term Cooperation</h3><p>Support after delivery, plus a partner for repeat orders and multi-phase projects.</p></article></div>
+      <div class="assure"><strong>No surprises.</strong><span>Clear drawings, itemized quotes and a written schedule before production begins.</span></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>03 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Products and solutions">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>Products &amp; Solutions</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Products &amp; solutions</p>
+        <h2>Four core products. One partner for every project.</h2>
+      </div>
+      <div class="lvl"><b>Core products</b><span>Our main focus</span></div>
+      <div class="core4"><article><img src="img/r-family-veranda.jpg" alt="ADU Houses"><h3>ADU Houses<small>p. 06</small></h3><p>A complete second home for family, guests or rental income.</p></article><article><img src="img/expandable-40.jpg" alt="Expandable Houses"><h3>Expandable Houses<small>p. 07</small></h3><p>Ships compact, opens on site into a finished home.</p></article><article><img src="img/tiny-front.jpg" alt="Tiny Houses and Cabins"><h3>Tiny Houses &amp; Cabins<small>p. 09</small></h3><p>Smart, efficient living in a small footprint.</p></article><article><img src="img/n-light-steel-villa-stone-yellow-facade.jpg" alt="Modular Homes"><h3>Modular Homes<small>p. 10</small></h3><p>Family homes and villas built from factory modules.</p></article></div>
+      <div class="lvl"><b>More solutions</b><span>Pages 13–17</span></div>
+      <div class="more8"><article><img src="img/guest-rooftop.jpg" alt="Villas and Guest Houses"><h4>Villas &amp; Guest Houses</h4></article><article><img src="img/n-white-prefab-office-palm-garden.jpg" alt="Portable Offices"><h4>Portable Offices</h4></article><article><img src="img/n-black-gable-pavilion-cafe-night.jpg" alt="Commercial Buildings"><h4>Commercial Buildings</h4></article><article><img src="img/p-resort-villas-aerial.jpg" alt="Resorts and Hotels"><h4>Resorts &amp; Hotels</h4></article><article><img src="img/p-visa-center-exterior.jpg" alt="Warehouses and Industrial"><h4>Warehouses &amp; Industrial</h4></article><article><img src="img/modular.jpg" alt="Storage and Site Units"><h4>Storage &amp; Site Units</h4></article><article><img src="img/n-modular-training-room-mesh-chairs.jpg" alt="Schools and Training"><h4>Schools &amp; Training</h4></article><article><img src="img/n-modular-clinic-ward-block-aerial-canopy.jpg" alt="Clinics and Staff Housing"><h4>Clinics &amp; Staff Housing</h4></article></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>04 / 24</b></div>
+  </div>
+</section>
+
+<section class="page divider" aria-label="Core products">
+  <div class="hero"><img src="img/villa-panorama-c2.jpg" alt=""></div>
+  <div class="topbar"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span class="edition">Section 01 · Core products</span></div>
+  <div class="body">
+    <p class="num">Section 01 · Core products</p>
+    <h2>Core<br>Products</h2>
+    <p class="intro">Our four core product lines cover most homes, rentals and backyard projects. Each one can be customized to your site, budget and style.</p>
+    <div class="toc"><div><b>ADU Houses</b><span>p. 06</span></div><div><b>Expandable Houses</b><span>p. 07</span></div><div><b>Tiny Houses &amp; Cabins</b><span>p. 09</span></div><div><b>Modular Homes</b><span>p. 10</span></div></div>
+  </div>
+</section>
+
+<section class="page" aria-label="ADU Houses">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>Core Products</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="badge-core"><i></i>Core product</p>
+        <h2>ADU Houses &amp; Backyard Studios</h2>
+        <p class="pitch">A complete second home on your lot for family, guests, a home office or long-term rental income.</p>
+      </div>
+      <img class="pp-hero" src="img/r-family-veranda.jpg" alt="Single-story ADU house with large windows" style="object-position:50% 60%">
+      <div class="pp-thumbs"><figure><img src="img/backyard-studio-c.jpg" alt="Backyard studio with glass doors"><figcaption>Backyard studio</figcaption></figure><figure><img src="img/n-container-home-kitchenette-interior.jpg" alt="Bright interior with kitchenette and glass doors"><figcaption>Kitchenette</figcaption></figure><figure><img src="img/int-bedroom.jpg" alt="Bedroom with white bedding"><figcaption>Bedroom</figcaption></figure></div>
+      <div class="cols3">
+        <div><p class="lbl">What's included</p><ul class="dash"><li>Full kitchen and bathroom</li><li>Insulated walls, roof and floor</li><li>Wiring and plumbing ready for hookup</li></ul></div>
+        <div><p class="lbl">What it means for you</p><ul class="dash"><li>A separate home without a long build</li><li>Can create steady rental income</li><li>Drawings to support your permit</li></ul></div>
+        <div><p class="lbl">Make it yours</p><div class="chips"><span class="chip">Floor plan</span><span class="chip">Cladding</span><span class="chip">Windows</span><span class="chip">Roof style</span><span class="chip">Porch</span></div></div>
+      </div>
+      <div class="why-it"><div><b>Family close by</b><span>Room for parents, adult children or a caregiver.</span></div><div><b>Income potential</b><span>A private unit you can rent long-term.</span></div><div><b>Less disruption</b><span>Built in a factory, installed quickly on site.</span></div></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>06 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Expandable Houses">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>Core Products</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="badge-core"><i></i>Core product</p>
+        <h2>Expandable Houses</h2>
+        <p class="pitch">Arrives as a compact unit and opens on site into a finished, ready-to-live home almost three times wider.</p>
+      </div>
+      <img class="hero-shot" src="img/expandable-40.jpg" alt="40 ft expandable house with a full glass front">
+      <div class="feature-grid">
+        <div>
+          <table class="spec">
+            <thead><tr><th></th><th>20 ft model</th><th>40 ft model</th></tr></thead>
+            <tbody>
+              <tr><th>Closed</th><td>19'4" × 7'3"</td><td>38'9" × 7'3"</td></tr>
+              <tr><th>Open</th><td>19'4" × 21'3"</td><td>38'9" × 20'10"</td></tr>
+              <tr><th>Interior</th><td>≈ 370 sq ft</td><td>≈ 745 sq ft</td></tr>
+              <tr><th>Ceiling</th><td>7'4"</td><td>7'3"</td></tr>
+              <tr><th>Layouts</th><td>Studio to 3 bed, 1 bath</td><td>Open plan to 3 bed, 1 bath</td></tr>
+              <tr><th>Shipping</th><td>2 per 40' HC container</td><td>1 per 40' HC container</td></tr>
+            </tbody>
+          </table>
+          <p class="note">Typical dimensions. Custom sizes and layouts available.</p>
+        </div>
+        <div class="stack">
+          <div><p class="lbl">What's included</p><ul class="dash"><li>Galvanized steel frame, insulated walls and roof</li><li>Bathroom with separate wet and dry areas</li><li>L-shaped kitchen and pre-installed wiring and plumbing</li></ul></div>
+          <div><p class="lbl">What it means for you</p><ul class="dash"><li>Arrives nearly finished, so site work stays small</li><li>Far shorter schedule than a traditional build</li></ul></div>
+          <div><p class="lbl">Make it yours</p><div class="chips"><span class="chip">Metal cladding</span><span class="chip">Glass front</span><span class="chip">Veranda &amp; canopy</span><span class="chip">Flat or pitched roof</span><span class="chip">Trailer base</span></div></div>
+        </div>
+      </div>
+      <div class="strip"><figure><img src="img/office-c.jpg" alt="White expandable house unfolded with central glass door"><figcaption>Unfolded on site</figcaption></figure><figure><img src="img/n-container-home-kitchenette-interior.jpg" alt="Bright interior with kitchenette and sliding glass doors"><figcaption>Kitchen</figcaption></figure><figure><img src="img/int-bedroom.jpg" alt="Bedroom inside an expandable house"><figcaption>Bedroom</figcaption></figure><figure><img src="img/g-resort-row-c.jpg" alt="Row of navy expandable houses on piers under palm trees"><figcaption>Installed on piers</figcaption></figure></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>07 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Expandable houses in real projects">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>Core Products</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="badge-core"><i></i>Expandable houses · Real projects</p>
+        <h2>Expandable houses, delivered.</h2>
+        <p class="pitch">Real expandable installations: resort rows, homestay villages and family homes. Every layout and finish can be adapted.</p>
+      </div>
+      <div class="mosaic"><figure class="m-big"><img src="img/n-expandable-homestay-village-night-street.jpg" alt="Two rows of expandable houses with porches lit at night"><figcaption>Homestay village at night</figcaption></figure><figure><img src="img/g-resort-row-c.jpg" alt="Navy expandable houses on piers under palm trees"><figcaption>Resort row on piers</figcaption></figure><figure><img src="img/exp-veranda-row.jpg" alt="Row of expandable houses with white verandas"><figcaption>Cabins with verandas</figcaption></figure><figure><img src="img/office-c.jpg" alt="White expandable house unfolded"><figcaption>Unfolded 20 ft model</figcaption></figure><figure><img src="img/r-family-veranda.jpg" alt="White expandable house with covered veranda"><figcaption>Family model with veranda</figcaption></figure><figure><img src="img/p-factory-expandable-line.jpg" alt="Row of finished expandable houses in a factory hall"><figcaption>Finished in the factory</figcaption></figure></div>
+      <div class="types"><div><b>Studio</b><span>Open plan, one room</span></div><div><b>1 Bedroom</b><span>Bedroom, bath, kitchen</span></div><div><b>2 Bedrooms</b><span>Family or rental layout</span></div><div><b>3 Bedrooms</b><span>40 ft model</span></div><div><b>Porch &amp; Veranda</b><span>Covered outdoor living</span></div><div><b>Glass Front</b><span>Full-height glazing</span></div><div><b>On Piers or Slab</b><span>Fits your site</span></div><div><b>Multi-Unit Sites</b><span>Rows, villages, resorts</span></div></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>08 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Tiny Houses and Cabins">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>Core Products</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="badge-core"><i></i>Core product</p>
+        <h2>Tiny Houses &amp; Cabins</h2>
+        <p class="pitch">Smart, efficient living in a small footprint, for first homes, retreats and vacation rentals.</p>
+      </div>
+      <img class="pp-hero" src="img/tiny-front.jpg" alt="Modern tiny house" style="object-position:50% 50%">
+      <div class="pp-thumbs"><figure><img src="img/g-capsule-snow.jpg" alt="Cabin in deep snow"><figcaption>Built for winter</figcaption></figure><figure><img src="img/pod-lakeside-c.jpg" alt="Black studio pod with glass door"><figcaption>Studio pod</figcaption></figure><figure><img src="img/i-container-kitchen.jpg" alt="Compact kitchen inside a tiny house"><figcaption>Compact kitchen</figcaption></figure></div>
+      <div class="cols3">
+        <div><p class="lbl">What's included</p><ul class="dash"><li>Insulated steel or composite shell</li><li>Large windows and glass doors</li><li>Compact kitchen and full bathroom</li></ul></div>
+        <div><p class="lbl">What it means for you</p><ul class="dash"><li>Lower cost to own and run</li><li>Easy to move to a new site</li><li>Strong appeal for short-term rentals</li></ul></div>
+        <div><p class="lbl">Make it yours</p><div class="chips"><span class="chip">Exterior color</span><span class="chip">Glass walls</span><span class="chip">Sleeping loft</span><span class="chip">Deck &amp; steps</span><span class="chip">Heating &amp; A/C</span></div></div>
+      </div>
+      <div class="why-it"><div><b>Affordable</b><span>A full home at a fraction of a traditional build.</span></div><div><b>Flexible</b><span>Place it on land, a backyard or a campground.</span></div><div><b>Rental-ready</b><span>Guests love a modern, design-led stay.</span></div></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>09 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Modular Homes">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>Core Products</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="badge-core"><i></i>Core product</p>
+        <h2>Modular Homes</h2>
+        <p class="pitch">Factory-built modules joined into spacious family homes and modern villas, one or two stories.</p>
+      </div>
+      <img class="pp-hero" src="img/n-light-steel-villa-stone-yellow-facade.jpg" alt="Modular home" style="object-position:50% 45%">
+      <div class="pp-thumbs"><figure><img src="img/villa-panorama-c2.jpg" alt="Modular villa with full-height glass"><figcaption>Glass-walled villa</figcaption></figure><figure><img src="img/modular.jpg" alt="White stacked modules forming a two-story home"><figcaption>Stacked modules</figcaption></figure><figure><img src="img/g-villa-aerial-c.jpg" alt="Modular villa with landscaped garden"><figcaption>Villa with garden</figcaption></figure></div>
+      <div class="cols3">
+        <div><p class="lbl">What's included</p><ul class="dash"><li>Stackable steel modules</li><li>Open-plan or multi-bedroom layouts</li><li>Full-height glass, balconies and stairs</li></ul></div>
+        <div><p class="lbl">What it means for you</p><ul class="dash"><li>Factory quality, fewer site delays</li><li>More predictable cost and schedule</li><li>Add modules as your family grows</li></ul></div>
+        <div><p class="lbl">Make it yours</p><div class="chips"><span class="chip">Module count</span><span class="chip">Floor plan</span><span class="chip">Facade</span><span class="chip">Glass walls</span><span class="chip">Finishes</span></div></div>
+      </div>
+      <div class="why-it"><div><b>Space to grow</b><span>From two bedrooms to large family layouts.</span></div><div><b>Modern design</b><span>Clean lines, big glass, quality finishes.</span></div><div><b>Predictable</b><span>A clear quote and schedule from day one.</span></div></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>10 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Interiors">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>Interiors</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Interiors</p>
+        <h2>Finished inside, not just outside.</h2>
+        <p class="pitch">Kitchens, bathrooms, living and work spaces are finished before delivery, so you can move in or open sooner.</p>
+      </div>
+      <div class="interiors"><figure><div class="ph"><img src="img/d-container-showroom-interior-mezzanine.jpg" alt="Multi-level modular showroom interior with glass railing"></div><figcaption>Showroom with mezzanine</figcaption></figure><figure><div class="ph"><img src="img/n-timber-lounge-interior-long-table.jpg" alt="Timber-lined lounge with long table and garden view"></div><figcaption>Timber lounge</figcaption></figure><figure><div class="ph"><img src="img/n-container-home-kitchenette-interior.jpg" alt="Bright interior with kitchenette and sliding glass doors"></div><figcaption>Kitchenette</figcaption></figure><figure><div class="ph"><img src="img/int-bedroom.jpg" alt="Bedroom with white bedding and black-framed window"></div><figcaption>Bedroom</figcaption></figure><figure><div class="ph"><img src="img/n-modular-office-corridor-wood-floor.jpg" alt="Bright modular office corridor with wood-look floor"></div><figcaption>Office corridor</figcaption></figure><figure><div class="ph"><img src="img/n-modular-training-room-mesh-chairs.jpg" alt="Modular training room with rows of chairs"></div><figcaption>Training room</figcaption></figure></div>
+      <div class="finishes">
+        <div><span>Walls</span><b>Sandwich panel or bamboo-wood finish</b></div>
+        <div><span>Floors</span><b>SPC or vinyl plank</b></div>
+        <div><span>Kitchens</span><b>Cabinets, sink and counters</b></div>
+        <div><span>Bathrooms</span><b>Wet and dry areas, full fixtures</b></div>
+      </div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>11 / 24</b></div>
+  </div>
+</section>
+
+<section class="page divider" aria-label="More solutions">
+  <div class="hero"><img src="img/p-resort-villas-aerial.jpg" alt=""></div>
+  <div class="topbar"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span class="edition">Section 02 · More solutions</span></div>
+  <div class="body">
+    <p class="num">Section 02 · More solutions</p>
+    <h2>More<br>Solutions</h2>
+    <p class="intro">The same building systems also deliver villas, offices, resorts, warehouses, schools and clinics, from a single unit to a complete site.</p>
+    <div class="toc"><div><b>Villas &amp; Guest Houses</b><span>p. 13</span></div><div><b>Offices &amp; Commercial</b><span>p. 14</span></div><div><b>Resorts &amp; Hospitality</b><span>p. 15</span></div><div><b>Industrial &amp; Storage</b><span>p. 16</span></div><div><b>Schools &amp; Clinics</b><span>p. 17</span></div><div><b>Customization</b><span>p. 18</span></div></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Villas and guest houses">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>More Solutions</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Villas &amp; guest houses</p>
+        <h2>Private villas and guest houses.</h2>
+        <p class="pitch">Comfortable stays for family, guests and vacation renters, with decks, rooftop terraces and big glass.</p>
+      </div>
+      <div class="mosaic"><figure class="m-big"><img src="img/guest-rooftop.jpg" alt="Container guest house with rooftop terrace and deck"><figcaption>Guest house with rooftop terrace</figcaption></figure><figure><img src="img/villa-panorama-c2.jpg" alt="Modular villa with full-height glass"><figcaption>Glass-walled villa</figcaption></figure><figure><img src="img/n-light-steel-villa-stone-yellow-facade.jpg" alt="Two-story home with stone and lap siding"><figcaption>Two-story family home</figcaption></figure><figure><img src="img/g-guesthouse-front.jpg" alt="Guest house with deck and stairs"><figcaption>Guest suite with deck</figcaption></figure><figure><img src="img/n-black-modular-pavilion-glass-wall-lake.jpg" alt="Black modular pavilion with glass wall by a lake"><figcaption>Lakeside pavilion</figcaption></figure><figure><img src="img/pod-lakeside-c.jpg" alt="Black modular studio pod with glass door"><figcaption>Garden studio</figcaption></figure></div>
+      <div class="types"><div><b>Luxury Villas</b><span>Large glass and premium finishes</span></div><div><b>Modern Villas</b><span>Clean, contemporary design</span></div><div><b>Holiday Homes</b><span>Ready for your vacation land</span></div><div><b>Guest Houses</b><span>Private suites for visitors</span></div><div><b>Vacation Rentals</b><span>Designed for guest appeal</span></div><div><b>Rooftop Decks</b><span>Extra outdoor living</span></div><div><b>Family Homes</b><span>One or two stories</span></div><div><b>Backyard Studios</b><span>Work, create or host</span></div></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>13 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Offices and commercial">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>More Solutions</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Offices &amp; commercial</p>
+        <h2>Workspaces and storefronts, open sooner.</h2>
+        <p class="pitch">Offices, cafés, showrooms and shops that are quick to open and easy to expand or move.</p>
+      </div>
+      <div class="mosaic"><figure class="m-big"><img src="img/n-black-gable-pavilion-cafe-night.jpg" alt="Black modular café pavilion lit at night"><figcaption>Café pavilion</figcaption></figure><figure><img src="img/n-white-prefab-office-palm-garden.jpg" alt="White single-story modular office among palms"><figcaption>Office building</figcaption></figure><figure><img src="img/n-black-gable-pavilion-gable-end.jpg" alt="Black gable-roof modular pavilion"><figcaption>Modern commercial pavilion</figcaption></figure><figure><img src="img/d-container-showroom-interior-mezzanine.jpg" alt="Modular showroom with mezzanine"><figcaption>Showroom interior</figcaption></figure><figure><img src="img/p-cafe-terrace.jpg" alt="Café terrace with green wall"><figcaption>Café terrace</figcaption></figure><figure><img src="img/n-prefab-office-open-plan-interior.jpg" alt="Bright open-plan modular office interior"><figcaption>Open-plan office</figcaption></figure></div>
+      <div class="types"><div><b>Portable Offices</b><span>Single units to full buildings</span></div><div><b>Office Buildings</b><span>Multi-room modular offices</span></div><div><b>Sales Offices</b><span>Real estate and site sales</span></div><div><b>Showrooms</b><span>Display products in style</span></div><div><b>Retail Shops</b><span>Pop-up or permanent stores</span></div><div><b>Cafés</b><span>Pavilions with terraces</span></div><div><b>Restaurants</b><span>Kitchens, dining and decks</span></div><div><b>Commercial Buildings</b><span>Large-span halls</span></div></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>14 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Resorts and hospitality">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>More Solutions</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Resorts &amp; hospitality</p>
+        <h2>Resorts and stays guests remember.</h2>
+        <p class="pitch">Villas, hotel units and glamping cabins that open in phases and grow with demand.</p>
+      </div>
+      <div class="mosaic"><figure class="m-big"><img src="img/p-resort-villas-aerial.jpg" alt="Aerial view of pitched-roof resort villas"><figcaption>Resort villas</figcaption></figure><figure><img src="img/resort-aerial.jpg" alt="Aerial view of capsule cabins around a pool"><figcaption>Capsule cabin resort</figcaption></figure><figure><img src="img/commercial-clean.jpg" alt="Colorful raised container hotel units"><figcaption>Hotel units on stilts</figcaption></figure><figure><img src="img/n-expandable-homestay-village-night-street.jpg" alt="Rows of expandable houses lit at night"><figcaption>Homestay village</figcaption></figure><figure><img src="img/exp-veranda-row.jpg" alt="Row of cabins with white verandas"><figcaption>Veranda cabins</figcaption></figure><figure><img src="img/g-capsule-snow.jpg" alt="Capsule cabin in winter"><figcaption>All-season capsule</figcaption></figure></div>
+      <div class="types"><div><b>Resort Villas</b><span>Private villas with decks</span></div><div><b>Hotel Units</b><span>Stackable rooms and suites</span></div><div><b>Eco Lodges</b><span>Low-impact raised cabins</span></div><div><b>Glamping Units</b><span>Capsule and pod cabins</span></div><div><b>Tourist Stays</b><span>Rooms for parks and attractions</span></div><div><b>Pools &amp; Decks</b><span>Outdoor living areas</span></div><div><b>Phased Openings</b><span>Start small, add units</span></div><div><b>Theming</b><span>Finishes to match your brand</span></div></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>15 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Industrial and storage">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>More Solutions</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Industrial, storage &amp; site buildings</p>
+        <h2>Strong buildings for hard work.</h2>
+        <p class="pitch">Warehouses, workshops, storage units and site facilities, sized for your operation and fast to assemble.</p>
+      </div>
+      <div class="mosaic"><figure class="m-big"><img src="img/p-detachable-install.jpg" alt="Two-story modular building being assembled"><figcaption>Two-story site building</figcaption></figure><figure><img src="img/modular.jpg" alt="White stacked modules at dusk"><figcaption>Stacked site units</figcaption></figure><figure><img src="img/p-visa-center-exterior.jpg" alt="Long single-story panel building"><figcaption>Large-span building</figcaption></figure><figure><img src="img/n-white-prefab-office-long-facade-palms.jpg" alt="Long white modular office building"><figcaption>Site office block</figcaption></figure><figure><img src="img/storage-c.jpg" alt="Grey storage unit with door on a deck"><figcaption>Storage unit</figcaption></figure><figure><img src="img/n-insulated-sandwich-wall-panels-stack-detail.jpg" alt="Stack of insulated sandwich wall panels"><figcaption>Insulated wall panels</figcaption></figure></div>
+      <div class="types"><div><b>Warehouses</b><span>Large-span structures</span></div><div><b>Storage Units</b><span>Secure and weather-resistant</span></div><div><b>Workshop Buildings</b><span>Power, light and ventilation</span></div><div><b>Industrial Buildings</b><span>Plant rooms and halls</span></div><div><b>Site Facilities</b><span>Restrooms, showers, canteens</span></div><div><b>Folding Units</b><span>Flat-packed, fast to set up</span></div><div><b>Guard Houses</b><span>Security and gate units</span></div><div><b>Relocatable</b><span>Move to the next site</span></div></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>16 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Schools and clinics">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>More Solutions</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Schools, clinics &amp; staff housing</p>
+        <h2>Classrooms, clinics and staff housing.</h2>
+        <p class="pitch">Modular buildings for education, healthcare and workforce accommodation, delivered on tight schedules.</p>
+      </div>
+      <div class="mosaic"><figure class="m-big"><img src="img/n-modular-clinic-ward-block-aerial-canopy.jpg" alt="Aerial view of a long modular clinic block with covered walkway"><figcaption>Healthcare facility</figcaption></figure><figure><img src="img/n-modular-training-room-mesh-chairs.jpg" alt="Training room with rows of chairs"><figcaption>Training room</figcaption></figure><figure><img src="img/n-modular-public-waiting-hall-corridor.jpg" alt="Modular waiting hall with seating and corridor"><figcaption>Waiting hall</figcaption></figure><figure><img src="img/n-white-prefab-office-corner-palms.jpg" alt="White single-story modular building"><figcaption>Classroom block</figcaption></figure><figure><img src="img/n-modular-office-corridor-wood-floor.jpg" alt="Modular corridor with wood-look floor"><figcaption>Bright corridors</figcaption></figure><figure><img src="img/p-clinic-modules-aerial.jpg" alt="Aerial view of a two-story modular block"><figcaption>Two-story ward block</figcaption></figure></div>
+      <div class="types"><div><b>Schools</b><span>Full campuses or extensions</span></div><div><b>Classrooms</b><span>Bright, insulated rooms</span></div><div><b>Training Centers</b><span>Flexible open plans</span></div><div><b>Medical Clinics</b><span>Clean, easy-care finishes</span></div><div><b>Healthcare Facilities</b><span>Wards and treatment rooms</span></div><div><b>Labor Camps</b><span>Housing at any scale</span></div><div><b>Staff Accommodation</b><span>Rooms, kitchens, laundry</span></div><div><b>Public Service</b><span>Service and visitor centers</span></div></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>17 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Customization">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>Customization</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Customization</p>
+        <h2>Designed around you.</h2>
+        <p class="pitch">Choose what matters to you. We turn your choices into drawings you approve before anything is built.</p>
+      </div>
+      <div class="cust8"><article><svg class="vis" viewBox="0 0 240 200" role="img" aria-label="Example floor plan with living room, kitchen, two bedrooms and bathroom" style="padding:4%"><g fill="none" stroke="#15302A" stroke-width="3"><rect x="10" y="10" width="220" height="180"/><path d="M120 10v70M10 110h110M120 110v80M120 80h110M175 110v80"/><path d="M120 110h55"/></g><g fill="#B08A4E"><rect x="60" y="107" width="22" height="6"/><rect x="132" y="77" width="22" height="6"/><rect x="117" y="140" width="6" height="20"/><rect x="172" y="140" width="6" height="18"/></g><g font-family="IBM Plex Mono, monospace" font-size="11" fill="#17201D" text-anchor="middle"><text x="65" y="62">LIVING</text><text x="175" y="50">KITCHEN</text><text x="65" y="155">BED 1</text><text x="147" y="155">BATH</text><text x="203" y="155">BED 2</text></g><g font-family="IBM Plex Mono, monospace" font-size="8" fill="#59655F" text-anchor="middle"><text x="120" y="6">40 FT</text></g></svg><h3>Floor Plans</h3><p>Open plan or one to three bedrooms, arranged around how you live.</p></article><article><img class="vis contain" src="img/cutaway.jpg" alt="3D cutaway of a one-bedroom layout"><h3>Interior Layout</h3><p>Move walls, kitchens and bathrooms. Add storage and built-ins.</p></article><article><img class="vis" src="img/g-guesthouse-front.jpg" alt="House with covered veranda"><h3>Exterior Design</h3><p>Verandas, canopies, decks, stairs and roof styles.</p></article><article><div class="vis swatch6"><i style="background:#F4F4F1"></i><i style="background:#1D2022"></i><i style="background:#5C6266"></i><i style="background:repeating-linear-gradient(90deg,#9A6233 0 .5cqw,#A86C3A .5cqw 1.1cqw,#8F5A2E 1.1cqw 1.5cqw)"></i><i style="background:#B9BDB8"></i><i style="background:#CDBFA6"></i></div><h3>Colors</h3><p>Frame and wall colors from white and black to woodgrain and sand.</p></article><article><img class="vis" src="img/n-black-modular-pavilion-glass-wall-lake.jpg" alt="House with large glass windows"><h3>Windows</h3><p>Sliding, awning or floor-to-ceiling glass, single or double glazed.</p></article><article><img class="vis" src="img/office-c.jpg" alt="House with glass and solid doors"><h3>Doors</h3><p>Steel security, glass sliding or hinged aluminum doors.</p></article><article><div class="vis mats"><div class="m-wood">Woodgrain</div><div class="m-metal">Metal cladding</div><div class="m-bamboo">Bamboo-wood</div><div class="m-panel">Sandwich panel</div></div><h3>Materials</h3><p>Choose wall panels, cladding, flooring and countertops.</p></article><article><div class="vis sizes"><div class="row"><span>10 FT</span><div class="bar"><i></i></div></div><div class="row"><span>20 FT</span><div class="bar"><i></i><i></i></div></div><div class="row"><span>30 FT</span><div class="bar"><i></i><i></i><i></i></div></div><div class="row"><span>40 FT</span><div class="bar"><i></i><i></i><i></i><i></i></div></div></div><h3>Sizes</h3><p>Standard 10–40 ft modules, combined side by side or stacked.</p></article></div>
+      <div class="project-band"><strong>Have your own design?</strong><span>Send us your drawings or site plan and we will adapt our building systems to fit.</span></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>18 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Project gallery completed">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>Project Gallery</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Project gallery · Completed projects</p>
+        <h2>Real buildings, really delivered.</h2>
+      </div>
+      <div class="gal" style=""><figure class="g-big"><img src="img/p-resort-villas-aerial.jpg" alt="Aerial view of resort villas"><figcaption>Resort villas</figcaption></figure><figure class="g-tall2"><img src="img/n-modular-clinic-ward-block-aerial-canopy.jpg" alt="Aerial view of modular clinic block"><figcaption>Healthcare facility</figcaption></figure><figure><img src="img/n-black-gable-pavilion-cafe-night.jpg" alt="Modular café pavilion at night"><figcaption>Café pavilion</figcaption></figure><figure><img src="img/n-light-steel-villa-stone-yellow-facade.jpg" alt="Two-story family home"><figcaption>Family home</figcaption></figure><figure><img src="img/resort-aerial.jpg" alt="Capsule cabins around a pool"><figcaption>Capsule resort</figcaption></figure><figure><img src="img/n-white-prefab-office-palm-garden.jpg" alt="White modular office building"><figcaption>Office building</figcaption></figure><figure><img src="img/g-resort-row-c.jpg" alt="Expandable houses on piers"><figcaption>Expandable resort</figcaption></figure><figure><img src="img/n-expandable-homestay-village-night-street.jpg" alt="Expandable village at night"><figcaption>Homestay village</figcaption></figure></div>
+      <p class="fine">Projects shown were delivered through KIKFIA's manufacturing partner network. Finishes, sizes and site work vary by project.</p>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>19 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Project gallery installation">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>Project Gallery</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Project gallery · Installation &amp; delivery</p>
+        <h2>From factory floor to finished site.</h2>
+      </div>
+      <div class="gal" style=""><figure class="g-big"><img src="img/p-office-install-clean.jpg" alt="Two-story modular office during installation"><figcaption>Two-story office installation</figcaption></figure><figure class="g-tall2"><img src="img/p-export-ship-clean.jpg" alt="Flat-pack modules loaded on a ship"><figcaption>Export shipping</figcaption></figure><figure><img src="img/p-factory-expandable-line.jpg" alt="Finished expandable houses in a factory hall"><figcaption>Factory finishing</figcaption></figure><figure><img src="img/p-clinic-frame-aerial.jpg" alt="Steel module frames assembled on site"><figcaption>Frame assembly</figcaption></figure><figure><img src="img/p-detachable-install.jpg" alt="Modules being stacked on site"><figcaption>Stacking modules</figcaption></figure><figure><img src="img/modular.jpg" alt="Stacked white modules at dusk"><figcaption>Modules in place</figcaption></figure><figure><img src="img/p-clinic-modules-aerial.jpg" alt="Two-story modular block from above"><figcaption>Completed block</figcaption></figure><figure><img src="img/n-insulated-sandwich-wall-panels-stack-detail.jpg" alt="Insulated sandwich wall panels"><figcaption>Insulated panels</figcaption></figure></div>
+      <p class="fine">Installation and delivery photos from projects completed through KIKFIA's manufacturing partner network.</p>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>20 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="How we work">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>How we work</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">How we work</p>
+        <h2>Six simple steps to your new building.</h2>
+        <p class="pitch">You always know what happens next, what you receive and what we need from you.</p>
+      </div>
+      <div class="journey"><div class="jstep"><div class="vis"><span class="n">01</span><svg class="icon"><use href="#i-phone"/></svg></div><div class="jtext"><h3>Consultation</h3><p>Tell us about your site, budget and goals. We recommend the right products.</p><p class="get"><b>You get</b>Model suggestions and a budget range</p></div></div><div class="jstep"><div class="vis"><span class="n">02</span><svg class="icon"><use href="#i-talk"/></svg></div><div class="jtext"><h3>Project Discussion</h3><p>We confirm quantities, timeline, delivery location and local requirements.</p><p class="get"><b>You get</b>A clear project scope</p></div></div><div class="jstep"><div class="vis"><span class="n">03</span><img src="img/cutaway.jpg" alt=""></div><div class="jtext"><h3>Design &amp; Customization</h3><p>Your layout, finishes and options become drawings for your approval.</p><p class="get"><b>You get</b>Approved drawings and written quote</p></div></div><div class="jstep"><div class="vis"><span class="n">04</span><img src="img/p-factory-expandable-line.jpg" alt=""></div><div class="jtext"><h3>Manufacturing</h3><p>Your building is made to the approved specification in the factory.</p><p class="get"><b>You get</b>Progress updates and a pre-shipment check</p></div></div><div class="jstep"><div class="vis"><span class="n">05</span><img src="img/p-export-ship-clean.jpg" alt=""></div><div class="jtext"><h3>Delivery</h3><p>We arrange packing, freight and delivery to your site or nearest port.</p><p class="get"><b>You get</b>Shipping schedule and documents</p></div></div><div class="jstep"><div class="vis"><span class="n">06</span><img src="img/p-clinic-frame-aerial.jpg" alt=""></div><div class="jtext"><h3>Installation Support</h3><p>Guides and direct help while your local crew sets the building.</p><p class="get"><b>You get</b>Installation guide and ongoing support</p></div></div></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>21 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Why customers choose KIKFIA">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>Our promise</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Why customers choose KIKFIA</p>
+        <h2>Peace of mind, built in.</h2>
+      </div>
+      <div class="pillars"><div><h3>Reliability</h3><p>We do what we quote, on the schedule we agree, and keep you informed at every step.</p></div><div><h3>Customization</h3><p>Your layout, finishes, colors and size. Every project is adapted to you.</p></div><div><h3>Quality</h3><p>Galvanized steel structures, quality finishes and a check before every shipment.</p></div><div><h3>Transparency</h3><p>Itemized quotes listing the building, options, shipping and what is not included.</p></div><div><h3>Long-Term Support</h3><p>Documents, installation guidance and help with questions long after delivery.</p></div><div class="note-cell"><h3>Small or large</h3><p>One studio or a multi-building site, you get the same care and one point of contact.</p></div></div>
+      <div class="quality">
+        <div>
+          <p class="eyebrow" style="margin-bottom:1.2cqw">Commitment to quality</p>
+          <ul class="checks">
+            <li><svg><use href="#check"/></svg><div><b>Galvanized steel structure</b><span>Corrosion-resistant frames on every building.</span></div></li>
+            <li><svg><use href="#check"/></svg><div><b>Everything confirmed in writing</b><span>Materials, sizes, finishes and options before production.</span></div></li>
+            <li><svg><use href="#check"/></svg><div><b>Production updates</b><span>Photos and progress reports while your building is made.</span></div></li>
+            <li><svg><use href="#check"/></svg><div><b>Pre-shipment check</b><span>Finishes and fittings reviewed before shipping.</span></div></li>
+            <li><svg><use href="#check"/></svg><div><b>Drawings and guides included</b><span>Documentation for your installer and permit office.</span></div></li>
+            <li><svg><use href="#check"/></svg><div><b>One point of contact</b><span>A dedicated person who knows your project.</span></div></li>
+          </ul>
+        </div>
+        <div class="photo"><img src="img/cabin-winter-detail.jpg" alt="White cabin wall and door covered in icicles on a sunny winter day"></div>
+      </div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>22 / 24</b></div>
+  </div>
+</section>
+
+<section class="page" aria-label="Frequently asked questions">
+  <div class="sheet">
+    <div class="run"><div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div><span>FAQ</span></div>
+    <div class="content">
+      <div class="title-block">
+        <p class="eyebrow">Questions buyers ask</p>
+        <h2>Straight answers before you start.</h2>
+      </div>
+      <div class="faq"><div><b>Can I change the floor plan?</b><p>Yes. Every model can be adapted: walls, kitchen, bathroom, windows, doors and finishes. You approve the drawings before production.</p></div><div><b>Do I need a permit?</b><p>Rules differ by city and county. We provide drawings and specifications to support your application. Your local authority makes the final decision.</p></div><div><b>What do I prepare on site?</b><p>A level foundation (slab, piers or screw piles) and utility connections, arranged with a local contractor. We share the foundation and connection details.</p></div><div><b>How is my building delivered?</b><p>Units ship in standard containers, flat-packed or as expandable modules. We coordinate freight to your site or nearest port and send all shipping documents.</p></div><div><b>How long does it take?</b><p>It depends on the model, customization and quantity. Your written quote includes a production and shipping schedule.</p></div><div><b>What is included in the price?</b><p>Your itemized quote lists the building, options, packing and shipping, plus anything not included, such as foundations and local installation.</p></div><div><b>Do you help with installation?</b><p>Yes. You receive installation guides and drawings, and we support your local crew directly during setup.</p></div><div><b>Can you handle large projects?</b><p>Yes. Through our manufacturing partner network we support single homes through resorts, camps and multi-building sites, delivered in phases if needed.</p></div></div>
+      <div class="assure" style="margin-top:auto"><strong>Still have questions?</strong><span>Book a free consultation. We will walk you through options, timing and costs for your site.</span></div>
+    </div>
+    <div class="foot"><span>Custom Portable Houses · kikfia.com</span><b>23 / 24</b></div>
+  </div>
+</section>
+
+<section class="page back" aria-label="Contact">
+  <div class="sheet">
+    <div class="brand"><svg><use href="#mark"/></svg><span class="word">KIKFIA</span></div>
+    <h2 class="contact-h">Let's plan<br>your project.</h2>
+    <p class="lead">Tell us what you want to build, where it is going and your budget. We will recommend the right solution and send a clear, written quote.</p>
+    <div class="contact">
+      <div><span>Phone</span><b>+92 314 5472429</b></div>
+      <div><span>Email</span><b>kikfiaofficial3@kikfia.com</b></div>
+      <div><span>Website</span><b>kikfia.com</b></div>
+      <div><span>Facebook &amp; Instagram</span><b>KIKFIA Custom Portable Houses</b></div>
+      <div class="span2"><span>Service area</span><b>United States &amp; international</b></div>
+    </div>
+    <div class="next3"><div><span>01</span><b>Send us your idea, location and budget</b></div><div><span>02</span><b>Free consultation to choose models and options</b></div><div><span>03</span><b>Receive drawings and an itemized quote</b></div></div>
+    <div class="cta"><strong>Book your free project consultation</strong><span>Call, email or message us on Facebook and Instagram to get started.</span></div>
+    <p class="fine">Images include design renderings and installations of the product types KIKFIA supplies. Specifications are typical and may change with customization; final specifications are confirmed in your written quote. Foundations, permits and utility connections are arranged locally.</p>
+  </div>
+</section>
